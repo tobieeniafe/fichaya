@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app",
     "start-angular": "cd angular-src && ng serve",
-    "deploy": "cd angular-src && ng build && cd .. && git add . && git commit -m 'deploy' && git push origin master && git push heroku master",
+    "build": "cd angular-src && ng build",
+    "deploy": "git add . && git commit -m 'deploy' && git push origin master && git push heroku master",
     "deploy-prod": "cd angular-src && ng build --env=prod && cd .. && git add . && git commit -m 'prod' && git push origin master && git push heroku master"
   },
   "repository": {
