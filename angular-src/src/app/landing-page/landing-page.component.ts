@@ -11,5 +11,6 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {}
   iphone: string = 'assets/images/iphone.png';
+  android: string = 'assets/images/android.png';
 
 }

@@ -7,7 +7,15 @@
 	font-family: 'Raleway', sans-serif;
 }
 
-.responsive-img{
+.responsive-img {
   width: 100%;
   height: auto;
+}
+
+.primary-text {
+	color: #001473;
+}
+
+.primary-background {
+	background-color: #001473;
 }

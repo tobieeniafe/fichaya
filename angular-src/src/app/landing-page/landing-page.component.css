@@ -9,12 +9,12 @@
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
-  padding: 8rem 0 7rem;
+  padding: 5rem 0 5rem;
   text-align: center;
 }
 .section-heading,
 .section-description {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 /* Hero
@@ -34,25 +34,24 @@
   background-image: url('/assets/images/values-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  padding-top: 10rem;
 }
 
-/* Values
+/* Pricing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
+.pricing {
   background-image: url('');
-  background-color: #333;
+  background-color: #fff;
   background-size: cover;
-  color: #fff;
-  padding-bottom: 5rem;
+  color: #001473;
+  padding-bottom: 0.7rem;
 }
-.value-multiplier {
-  margin-bottom: .5rem;
-  color: #11DFC7;
+.plan-title {
+  margin-bottom: 1rem;
+  color: #001473;
 }
-.value-heading {
-  margin-bottom: .3rem;
-}
-.value-description {
+
+.plan-description {
   opacity: .8;
   font-weight: 300;
 }
@@ -66,10 +65,10 @@
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
-  background-image: url('');
+  background-image: url('/assets/images/values-bg.jpg');
   background-size: cover;
   background-color: #333;
-  color: #fff;
+  color: #001473;
 }
 .categories .section-description { 
   margin-bottom: 4rem;
@@ -78,7 +77,7 @@
 /* Bigger than 550 */
 @media (min-width: 550px) {
   .section {
-    padding: 12rem 0 11rem;
+    padding: 3rem 0 11rem;
   }
   .hero {
     padding-bottom: 12rem;
@@ -114,7 +113,7 @@
     font-size: 2.6rem;
   }
   .section {
-    padding: 14rem 0 15rem;
+    padding: 4.5rem 0 15rem;
   }
   .hero {
     padding: 16rem 0 14rem;
@@ -141,7 +140,7 @@
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 20rem 0 19rem;
+    padding: 6rem 0 19rem;
   }
   .hero {
     padding: 22rem 0;
@@ -157,4 +156,20 @@
     top: -14rem;
     max-height: 570px;
   }
+}
+
+.plans, .why{
+  background-color: #fff;
+  padding: 0.7rem;
+  border-radius: 30px;
+  box-shadow: 0px 1px 15px 1px #ccc;
+  color: #001473;
+}
+
+.why{
+  background-color: #fff;
+  padding: 5rem 3rem 3rem 3rem;
+  border-radius: 30px;
+  box-shadow: 0px 1px 15px 1px #ccc;
+  color: #001473;
 }
