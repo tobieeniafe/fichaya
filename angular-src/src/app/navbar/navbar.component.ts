@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-declare var jQuery: any;
-declare var $: any;
+import * as $ from 'jquery';
+import * as jQuery from 'jquery';
 
 @Component({
   selector: 'app-navbar',
