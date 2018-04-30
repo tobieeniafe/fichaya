@@ -7,17 +7,21 @@
 	font-family: 'Raleway', sans-serif;
 }
 
+body, html {
+   height:100%
+}
+
 .responsive-img {
   width: 100%;
   height: auto;
 }
 
 .primary-text {
-	color: #001473;
+	color: #000080;
 }
 
 .primary-background {
-	background-color: #001473;
+	background-color: #000080;
 }
 
 .white-text{
@@ -26,4 +30,8 @@
 
 .white{
 	background-color: #fff;
+}
+
+.button {
+  border-radius: 100px;
 }

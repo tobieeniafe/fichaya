@@ -101,8 +101,8 @@ nav ul li a {
   text-transform: uppercase;
 }
 
-li a:hover {
-  color: #001473;
+nav ul li a:hover {
+  color: #000080;
   font-weight: bold;
 }
 
