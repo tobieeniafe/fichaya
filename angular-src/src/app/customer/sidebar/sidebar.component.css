@@ -1,0 +1,9 @@
+.side-nav {
+	background-color: #000080 !important;
+	color: #fff;
+	padding-top: 5rem;
+}
+
+.side-nav li a h4 {
+	color: #fff !important;
+}

@@ -1,4 +1,5 @@
 
+<app-navbar></app-navbar>
 
 <div class="back">
   <div class="container">
@@ -8,20 +9,20 @@
 	    <div class="one-half column form" align="center">
 	    	<div class="withmail">
 	    		<h3 class="primary-text">Customer Login</h3>
-		    	<form class="row" novalidate="">
-		    		<input class="u-full-width" type="email" placeholder="email">
-		    		<input class="u-full-width" type="password" placeholder="password">
-		    		<a class="button button-primary">Login</a> 
+		    	<form class="row" (submit)="submitEmailForm()">
+		    		<input class="u-full-width" type="email" placeholder="email" name="email" [(ngModel)]="email" required="">
+		    		<input class="u-full-width" type="password" placeholder="password" name="password1" [(ngModel)]="password1" required="">
+		    		<button class="button button-primary" type="submit">Login</button>
 		    	</form>
 		    	<button class="button button-primary viewphone" style="opacity: 0.8">Login with phone number</button>
 	    	</div>
 
 	    	<div class="withphone">
 	    		<h3 class="primary-text">Customer Login</h3>
-		    	<form class="row" novalidate="">
-		    		<input class="u-full-width" type="number" placeholder="phone number">
-		    		<input class="u-full-width" type="password" placeholder="password">
-		    		<a class="button button-primary">Login</a> 
+		    	<form class="row" novalidate="" (submit)="submitPhoneForm()">
+		    		<input class="u-full-width" type="text" placeholder="phone number" name="phone" [(ngModel)]="phone">
+		    		<input class="u-full-width" type="password" placeholder="password" name="password2" [(ngModel)]="password2">
+		    		<button class="button button-primary" type="submit">Login</button>
 		    	</form>
 		    	<button class="button button-primary viewmail" style="opacity: 0.8">Login with email</button>		    	
 	    	</div>
