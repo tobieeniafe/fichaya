@@ -13,6 +13,23 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 
 /***/ }),
 
+/***/ "../../../../../src/app/api.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Api; });
+var Api = (function () {
+    function Api() {
+        this.endpoint = 'https://fichaya-api.herokuapp.com/api/v1';
+        //readonly endpoint: string = 'http://localhost:3000/api/v1'
+    }
+    return Api;
+}());
+
+//# sourceMappingURL=api.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/app.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34,7 +51,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n\r\n<router-outlet></router-outlet>\r\n\r\n"
+module.exports = "\r\n<router-outlet></router-outlet>\r\n\r\n"
 
 /***/ }),
 
@@ -58,7 +75,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -77,19 +94,42 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navbar_navbar_component__ = __webpack_require__("../../../../../src/app/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__landing_page_landing_page_component__ = __webpack_require__("../../../../../src/app/landing-page/landing-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__customer_login_login_component__ = __webpack_require__("../../../../../src/app/customer/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__customer_register_register_component__ = __webpack_require__("../../../../../src/app/customer/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__customer_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/customer/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_image_upload__ = __webpack_require__("../../../../angular2-image-upload/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_image_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_image_upload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navbar_navbar_component__ = __webpack_require__("../../../../../src/app/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__landing_page_landing_page_component__ = __webpack_require__("../../../../../src/app/landing-page/landing-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__customer_login_login_component__ = __webpack_require__("../../../../../src/app/customer/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__customer_register_register_component__ = __webpack_require__("../../../../../src/app/customer/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__customer_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/customer/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_validator_service__ = __webpack_require__("../../../../../src/app/services/validator.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_authguard_service__ = __webpack_require__("../../../../../src/app/services/authguard.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_routeguard_service__ = __webpack_require__("../../../../../src/app/services/routeguard.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__customer_sidebar_sidebar_component__ = __webpack_require__("../../../../../src/app/customer/sidebar/sidebar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__customer_booking_history_booking_history_component__ = __webpack_require__("../../../../../src/app/customer/booking-history/booking-history.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__customer_account_settings_account_settings_component__ = __webpack_require__("../../../../../src/app/customer/account-settings/account-settings.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -102,9 +142,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: '', redirectTo: '/index', pathMatch: 'full' },
-    { path: 'index', component: __WEBPACK_IMPORTED_MODULE_5__landing_page_landing_page_component__["a" /* LandingPageComponent */] },
-    { path: 'customer/login', component: __WEBPACK_IMPORTED_MODULE_6__customer_login_login_component__["a" /* LoginComponent */] },
-    { path: 'customer/register', component: __WEBPACK_IMPORTED_MODULE_7__customer_register_register_component__["a" /* RegisterComponent */] }
+    { path: 'index', component: __WEBPACK_IMPORTED_MODULE_9__landing_page_landing_page_component__["a" /* LandingPageComponent */] },
+    { path: 'customer/login', component: __WEBPACK_IMPORTED_MODULE_10__customer_login_login_component__["a" /* LoginComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__services_routeguard_service__["a" /* RouteGuardService */]] },
+    { path: 'customer/register', component: __WEBPACK_IMPORTED_MODULE_11__customer_register_register_component__["a" /* RegisterComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__services_routeguard_service__["a" /* RouteGuardService */]] },
+    { path: 'customer/dashboard', component: __WEBPACK_IMPORTED_MODULE_13__customer_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_16__services_authguard_service__["a" /* AuthGuardService */]] },
+    { path: 'customer/booking', component: __WEBPACK_IMPORTED_MODULE_19__customer_booking_history_booking_history_component__["a" /* BookingHistoryComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_16__services_authguard_service__["a" /* AuthGuardService */]] },
+    { path: 'customer/account', component: __WEBPACK_IMPORTED_MODULE_20__customer_account_settings_account_settings_component__["a" /* AccountSettingsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_16__services_authguard_service__["a" /* AuthGuardService */]] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -112,26 +155,203 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__landing_page_landing_page_component__["a" /* LandingPageComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__customer_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__customer_register_register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__footer_footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__customer_dashboard_dashboard_component__["a" /* DashboardComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__navbar_navbar_component__["a" /* NavbarComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__landing_page_landing_page_component__["a" /* LandingPageComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__customer_login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__customer_register_register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__customer_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__customer_sidebar_sidebar_component__["a" /* SidebarComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__customer_booking_history_booking_history_component__["a" /* BookingHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__customer_account_settings_account_settings_component__["a" /* AccountSettingsComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(routes)
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common__["CommonModule"],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forRoot(routes),
+            __WEBPACK_IMPORTED_MODULE_6_angular2_image_upload__["ImageUploadModule"].forRoot()
         ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_14__services_validator_service__["a" /* ValidatorService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__services_authguard_service__["a" /* AuthGuardService */], __WEBPACK_IMPORTED_MODULE_17__services_routeguard_service__["a" /* RouteGuardService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/account-settings/account-settings.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.body-view {\r\n    background-color: #fff;\r\n    /*min-height: 100%;*/\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    /*bottom: 0;*/\r\n    padding: 2rem 5rem 5rem 5rem;\r\n}\r\n\r\n.hamburger:hover{\r\n\tcursor: pointer;\r\n    color: #000080;\r\n}\r\n\r\n.ion-ios-close{\r\n    display: none;\r\n}\r\n\r\n.side-nav-open, h3, h5{\r\n    color: #000080;\r\n}\r\n\r\n.table-body{\r\n    box-shadow: 0px 1px 15px 1px #ccc;\r\n    padding: 3rem;\r\n    border-radius: 15px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/account-settings/account-settings.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"main-wrap\">    \n    <div class=\"body-view\">\n        <app-sidebar></app-sidebar>\n        <div class=\"container\">\n            <h3 style=\"padding-left: 10rem\"><a href=\"#\" data-activates=\"slide-out\" class=\"side-nav-open\">\n            \t<i class=\"ion-navicon\"></i>\n            \t<i class=\"ion-ios-close\"></i>\n            </a></h3>\n            <h3>{{title}}</h3>\n            <br><br>\n\n            <div class=\"row table-body\"><form>\n                <h5>Personal Information</h5>\n                \n                <div class=\"input-field col s6\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Firstname\">\n                </div>\n                <div class=\"input-field col s6\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Lastname\">\n                </div>\n                <div class=\"input-field col s3\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Phone Number\">\n                </div>\n                <div class=\"input-field col s6\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Email\">\n                </div>\n                <div class=\"input-field col s3\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Plan\">\n                </div>\n                <div class=\"input-field col s12\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Address\">\n                </div>\n                <div class=\"col s12 center\" style=\"padding-top: 10px\">\n                    <button class=\"button button-primary\" type=\"\">Update</button>\n                </div>\n            </form></div>\n\n            <br><br>\n\n            <div class=\"row table-body\"><form>\n                <h5>Payment Settings</h5>\n                \n                <div class=\"input-field col s6\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Card Number\">\n                </div>\n                <div class=\"input-field col s6\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"Card Holder\">\n                </div>\n                <div class=\"input-field col s2\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"CVV2\">\n                </div>\n                <div class=\"input-field col s1\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"MM\">\n                </div>\n                <div class=\"input-field col s1\">\n                  <input type=\"text\" class=\"validate\" placeholder=\"YY\">\n                </div>\n                <div class=\"col s12 center\" style=\"padding-top: 10px\">\n                    <button class=\"button button-primary\" type=\"\">Add Card</button>\n                </div>\n            </form></div>\n\n        </div>      \n    </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/account-settings/account-settings.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountSettingsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AccountSettingsComponent = (function () {
+    function AccountSettingsComponent(_auth, router) {
+        this._auth = _auth;
+        this.router = router;
+        this.title = 'Account Settings';
+        $(document).ready(function () {
+            //customer sidebar
+            $('.side-nav-open').sideNav({
+                menuWidth: 300,
+                edge: 'left',
+                closeOnClick: true,
+                draggable: true,
+                onOpen: function (el) { },
+                onClose: function (el) { }
+            });
+            $('select').material_select();
+            //change hamburger content
+            $(".side-nav-open").click(function () {
+                $('.ion-navicon').toggle();
+                $('.ion-ios-close').toggle();
+            });
+        });
+    }
+    AccountSettingsComponent.prototype.ngOnInit = function () { };
+    return AccountSettingsComponent;
+}());
+AccountSettingsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-account-settings',
+        template: __webpack_require__("../../../../../src/app/customer/account-settings/account-settings.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/customer/account-settings/account-settings.component.css"), __webpack_require__("../../../../materialize-css/dist/css/materialize.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+], AccountSettingsComponent);
+
+var _a, _b;
+//# sourceMappingURL=account-settings.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/booking-history/booking-history.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.body-view {\r\n    background-color: #fff;\r\n    /*min-height: 100%;*/\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    transition: left 0.5s ease;\r\n    padding: 2rem 5rem;\r\n}\r\n\r\n.hamburger:hover{\r\n\tcursor: pointer;\r\n    color: #000080;\r\n}\r\n\r\n.ion-ios-close{\r\n    display: none;\r\n}\r\n\r\n.table-body{\r\n    box-shadow: 0px 1px 15px 1px #ccc;\r\n    padding: 3rem;\r\n    border-radius: 15px;\r\n}\r\n\r\n.side-nav-open, h3, th{\r\n    color: #000080;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/booking-history/booking-history.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"main-wrap\">    \n    <div class=\"body-view\">\n        <app-sidebar></app-sidebar>\n        <!-- container starts --> \n        <div class=\"container\">\n            <h3 style=\"padding-left: 10rem\"><a href=\"#\" data-activates=\"slide-out\" class=\"side-nav-open\">\n            \t<i class=\"ion-navicon\"></i>\n            \t<i class=\"ion-ios-close\"></i>\n            </a></h3>\n\n            <h3>{{title}}</h3>\n\n            <div class=\"table-body\"><table class=\"striped\">\n                <thead>\n                  <tr>\n                      <th>Date</th>\n                      <th>Address</th>\n                      <th>Price</th>\n                      <th>Status</th>\n                  </tr>\n                </thead>\n\n                <tbody>\n                  <tr>\n                    <td>10-03-2018</td>\n                    <td>21 Sesame street, lagos</td>\n                    <td>&#8358;15,000</td>\n                    <td>Ongoing</td>\n                  </tr>\n                  <tr>\n                    <td>10-03-2018</td>\n                    <td>21 Sesame street, lagos</td>\n                    <td>&#8358;15,000</td>\n                    <td>Completed</td>\n                  </tr>\n                  <tr>\n                    <td>10-03-2018</td>\n                    <td>21 Sesame street, lagos</td>\n                    <td>&#8358;15,000</td>\n                    <td>Completed</td>\n                  </tr>\n                  <tr>\n                    <td>10-03-2018</td>\n                    <td>21 Sesame street, lagos</td>\n                    <td>&#8358;15,000</td>\n                    <td>Ongoing</td>\n                  </tr>\n                </tbody>\n            </table></div>\n\n        </div>\n        <!-- container ends -->      \n    </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/booking-history/booking-history.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookingHistoryComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BookingHistoryComponent = (function () {
+    function BookingHistoryComponent(_auth, router) {
+        this._auth = _auth;
+        this.router = router;
+        this.title = 'Booking History';
+        $(document).ready(function () {
+            //customer sidebar
+            $('.side-nav-open').sideNav({
+                menuWidth: 300,
+                edge: 'left',
+                closeOnClick: true,
+                draggable: true,
+                onOpen: function (el) { },
+                onClose: function (el) { }
+            });
+            //$('.side-nav-open').sideNav('show');
+            //change hamburger content
+            $(".side-nav-open").click(function () {
+                $('.ion-navicon').toggle();
+                $('.ion-ios-close').toggle();
+            });
+        });
+    }
+    BookingHistoryComponent.prototype.ngOnInit = function () { };
+    return BookingHistoryComponent;
+}());
+BookingHistoryComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-booking-history',
+        template: __webpack_require__("../../../../../src/app/customer/booking-history/booking-history.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/customer/booking-history/booking-history.component.css"), __webpack_require__("../../../../materialize-css/dist/css/materialize.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+], BookingHistoryComponent);
+
+var _a, _b;
+//# sourceMappingURL=booking-history.component.js.map
 
 /***/ }),
 
@@ -143,7 +363,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\r\n.body-view {\r\n    background-color: #fff;\r\n    /*min-height: 100%;*/\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    transition: left 0.5s ease;\r\n    padding: 2rem 5rem;\r\n}\r\n\r\n.hamburger:hover{\r\n\tcursor: pointer;\r\n    color: #000080;\r\n}\r\n\r\n.ion-ios-close{\r\n    display: none;\r\n}\r\n\r\n.side-nav-open, h3{\r\n    color: #000080;\r\n}", ""]);
 
 // exports
 
@@ -156,7 +376,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/customer/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  dashboard works!\n</p>\n"
+module.exports = "\n<div class=\"main-wrap\">    \n    <div class=\"body-view\">\n        <app-sidebar></app-sidebar>\n        <div class=\"container\">\n            <h3 style=\"padding-left: 10rem\"><a href=\"#\" data-activates=\"slide-out\" class=\"side-nav-open\">\n            \t<i class=\"ion-navicon\"></i>\n            \t<i class=\"ion-ios-close\"></i>\n            </a></h3>\n            <h3>{{title}}</h3>\n        </div>      \n    </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -166,6 +386,8 @@ module.exports = "<p>\n  dashboard works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -176,22 +398,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var DashboardComponent = (function () {
-    function DashboardComponent() {
+    function DashboardComponent(_auth, router) {
+        this._auth = _auth;
+        this.router = router;
+        this.title = 'Dashboard';
+        $(document).ready(function () {
+            //customer sidebar
+            $('.side-nav-open').sideNav({
+                menuWidth: 300,
+                edge: 'left',
+                closeOnClick: true,
+                draggable: true,
+                onOpen: function (el) { },
+                onClose: function (el) { }
+            });
+            //$('.side-nav-open').sideNav('show');
+            //change hamburger content
+            $(".side-nav-open").click(function () {
+                $('.ion-navicon').toggle();
+                $('.ion-ios-close').toggle();
+            });
+        });
     }
-    DashboardComponent.prototype.ngOnInit = function () {
-    };
+    DashboardComponent.prototype.ngOnInit = function () { };
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
         template: __webpack_require__("../../../../../src/app/customer/dashboard/dashboard.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/customer/dashboard/dashboard.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/customer/dashboard/dashboard.component.css"), __webpack_require__("../../../../materialize-css/dist/css/materialize.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], DashboardComponent);
 
+var _a, _b;
 //# sourceMappingURL=dashboard.component.js.map
 
 /***/ }),
@@ -217,7 +461,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/customer/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"back\">\n  <div class=\"container\">\n  \t<div class=\"row\">\n\t    <div class=\"one-half column white-text\"><h4 style=\"padding-top: 10rem\">Become a partner with fichaya and make money cleaning.</h4></div>\n\n\t    <div class=\"one-half column form\" align=\"center\">\n\t    \t<div class=\"withmail\">\n\t    \t\t<h3 class=\"primary-text\">Customer Login</h3>\n\t\t    \t<form class=\"row\" novalidate=\"\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"email\" placeholder=\"email\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"password\" placeholder=\"password\">\n\t\t    \t\t<a class=\"button button-primary\">Login</a> \n\t\t    \t</form>\n\t\t    \t<button class=\"button button-primary viewphone\" style=\"opacity: 0.8\">Login with phone number</button>\n\t    \t</div>\n\n\t    \t<div class=\"withphone\">\n\t    \t\t<h3 class=\"primary-text\">Customer Login</h3>\n\t\t    \t<form class=\"row\" novalidate=\"\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"number\" placeholder=\"phone number\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"password\" placeholder=\"password\">\n\t\t    \t\t<a class=\"button button-primary\">Login</a> \n\t\t    \t</form>\n\t\t    \t<button class=\"button button-primary viewmail\" style=\"opacity: 0.8\">Login with email</button>\t\t    \t\n\t    \t</div>\n\t    \t<br>\n\t    \t<h6>Not yet registered? <a routerLink=\"/customer/register\">Register now</a></h6>\n\n\t    </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "\n<app-navbar></app-navbar>\n\n<div class=\"back\">\n  <div class=\"container\">\n  \t<div class=\"row\">\n\t    <div class=\"one-half column white-text\"><h4 style=\"padding-top: 10rem\">Become a partner with fichaya and make money cleaning.</h4></div>\n\n\t    <div class=\"one-half column form\" align=\"center\">\n\t    \t<div class=\"withmail\">\n\t    \t\t<h3 class=\"primary-text\">Customer Login</h3>\n\t\t    \t<form class=\"row\" (submit)=\"submitEmailForm()\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"email\" placeholder=\"email\" name=\"email\" [(ngModel)]=\"email\" required=\"\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"password\" placeholder=\"password\" name=\"password1\" [(ngModel)]=\"password1\" required=\"\">\n\t\t    \t\t<button class=\"button button-primary\" type=\"submit\">Login</button>\n\t\t    \t</form>\n\t\t    \t<button class=\"button button-primary viewphone\" style=\"opacity: 0.8\">Login with phone number</button>\n\t    \t</div>\n\n\t    \t<div class=\"withphone\">\n\t    \t\t<h3 class=\"primary-text\">Customer Login</h3>\n\t\t    \t<form class=\"row\" novalidate=\"\" (submit)=\"submitPhoneForm()\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"text\" placeholder=\"phone number\" name=\"phone\" [(ngModel)]=\"phone\">\n\t\t    \t\t<input class=\"u-full-width\" type=\"password\" placeholder=\"password\" name=\"password2\" [(ngModel)]=\"password2\">\n\t\t    \t\t<button class=\"button button-primary\" type=\"submit\">Login</button>\n\t\t    \t</form>\n\t\t    \t<button class=\"button button-primary viewmail\" style=\"opacity: 0.8\">Login with email</button>\t\t    \t\n\t    \t</div>\n\t    \t<br>\n\t    \t<h6>Not yet registered? <a routerLink=\"/customer/register\">Register now</a></h6>\n\n\t    </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -227,8 +471,11 @@ module.exports = "\n\n<div class=\"back\">\n  <div class=\"container\">\n  \t<di
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_validator_service__ = __webpack_require__("../../../../../src/app/services/validator.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -240,31 +487,96 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var LoginComponent = (function () {
-    function LoginComponent() {
-        __WEBPACK_IMPORTED_MODULE_1_jquery__(document).ready(function () {
-            __WEBPACK_IMPORTED_MODULE_1_jquery__(".viewphone").click(function () {
-                __WEBPACK_IMPORTED_MODULE_1_jquery__(".withmail").hide(1);
-                __WEBPACK_IMPORTED_MODULE_1_jquery__(".withphone").fadeIn(5000);
+    function LoginComponent(router, _auth, _validateService) {
+        this.router = router;
+        this._auth = _auth;
+        this._validateService = _validateService;
+        __WEBPACK_IMPORTED_MODULE_2_jquery__(document).ready(function () {
+            __WEBPACK_IMPORTED_MODULE_2_jquery__(".viewphone").click(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__(".withmail").hide(1);
+                __WEBPACK_IMPORTED_MODULE_2_jquery__(".withphone").fadeIn(5000);
             });
-            __WEBPACK_IMPORTED_MODULE_1_jquery__(".viewmail").click(function () {
-                __WEBPACK_IMPORTED_MODULE_1_jquery__(".withphone").hide(1);
-                __WEBPACK_IMPORTED_MODULE_1_jquery__(".withmail").fadeIn(5000);
+            __WEBPACK_IMPORTED_MODULE_2_jquery__(".viewmail").click(function () {
+                __WEBPACK_IMPORTED_MODULE_2_jquery__(".withphone").hide(1);
+                __WEBPACK_IMPORTED_MODULE_2_jquery__(".withmail").fadeIn(5000);
             });
         });
     }
     LoginComponent.prototype.ngOnInit = function () { };
+    LoginComponent.prototype.submitEmailForm = function () {
+        var _this = this;
+        var customer = {
+            email: this.email,
+            password: this.password1
+        };
+        if (!this._validateService.ValidateEmail(customer.email)) {
+            console.log("Invalid email");
+            return false;
+        }
+        if (!this._validateService.ValidateLoginEmail(customer)) {
+            console.log("Invalid login prarameters");
+            return false;
+        }
+        this._auth.loginCustomerEmail(customer).subscribe(function (data) {
+            if (data.success == false) {
+                console.log(data.message);
+            }
+            else if (data.success == true) {
+                console.log(data.message);
+                localStorage.setItem('token', data.token);
+                _this.router.navigate(['/customer/dashboard']);
+            }
+            else {
+                console.log(data);
+                _this.router.navigate(['/customer/login']);
+            }
+        }, function (err) { return (console.log('error')); }, function () { return console.log(); });
+    };
+    LoginComponent.prototype.submitPhoneForm = function () {
+        var _this = this;
+        var customer = {
+            phone: this.phone,
+            password: this.password2
+        };
+        if (!this._validateService.ValidatePhone(customer.phone)) {
+            console.log("Invalid phone number" + customer.phone.toString().length);
+            return false;
+        }
+        if (!this._validateService.ValidateLoginPhone(customer)) {
+            console.log("Invalid login prarameters");
+            return false;
+        }
+        this._auth.loginCustomerPhone(customer).subscribe(function (data) {
+            if (data.success == false) {
+                console.log(data.message);
+            }
+            else if (data.success == true) {
+                console.log(data.message);
+                localStorage.setItem('token', data.token);
+                _this.router.navigate(['/customer/dashboard']);
+            }
+            else {
+                console.log(data);
+                _this.router.navigate(['/customer/login']);
+            }
+        }, function (err) { return (console.log('error')); }, function () { return console.log(); });
+    };
     return LoginComponent;
 }());
 LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/customer/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/customer/login/login.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_validator_service__["a" /* ValidatorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_validator_service__["a" /* ValidatorService */]) === "function" && _c || Object])
 ], LoginComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -318,7 +630,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-register',
         template: __webpack_require__("../../../../../src/app/customer/register/register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/customer/register/register.component.css")]
@@ -327,6 +639,92 @@ RegisterComponent = __decorate([
 ], RegisterComponent);
 
 //# sourceMappingURL=register.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/sidebar/sidebar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".side-nav {\r\n\tbackground-color: #000080 !important;\r\n\tcolor: #fff;\r\n\tpadding-top: 2rem;\r\n}\r\n\r\n.side-nav li a h5 {\r\n\tcolor: #fff !important;\r\n}\r\n\r\n.ion{\r\n\tfont-size: 25px;\r\n}\r\n\r\n.avatar{\r\n\twidth: 150px;\r\n\theight: 150px;\r\n}\r\n\r\n.logout: hover{\r\n\tcolor: #000080;\r\n\tbackground-color: #fff;\t\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/sidebar/sidebar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<ul id=\"slide-out\" class=\"side-nav\" align=\"center\">\r\n    <li><img src=\"{{avatar}}\" class=\"circle avatar\"></li>\r\n    <li class=\"white-text\"><h4>Firstname Lastname</h4></li>\r\n    <li><a routerLink=\"/customer/dashboard\"><h5>Dashboard <i class=\"ion ion-ios-speedometer-outline\"></i></h5></a></li>\r\n    <li><a routerLink=\"/customer/booking\"><h5>Booking History <i class=\"ion ion-ios-clock-outline\"></i></h5></a></li>\r\n    <li><a routerLink=\"/customer/account\"><h5>Account Settings <i class=\"ion ion-ios-gear-outline\"></i></h5></a></li>\r\n    <li><a routerLink=\"\"><h5>Become An Associate <i class=\"ion ion-ios-personadd\"></i></h5></a></li>\r\n    <br>\r\n    <button class=\"button logout\" (click)='logOut()' style=\"color: #fff; border: 2px solid #fff\">Logout</button>\r\n</ul>\r\n  \r\n  \r\n\r\n  "
+
+/***/ }),
+
+/***/ "../../../../../src/app/customer/sidebar/sidebar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SidebarComponent = (function () {
+    function SidebarComponent(_auth, router) {
+        this._auth = _auth;
+        this.router = router;
+        this.avatar = 'assets/images/avatar.png';
+        this.loggedIn$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["BehaviorSubject"](this.loggedIn);
+        $(document).ready(function () {
+            // $('.side-nav-close').sideNav('show');
+        });
+    }
+    SidebarComponent.prototype.ngOnInit = function () { };
+    SidebarComponent.prototype.setLoggedIn = function (value) {
+        // Update login status subject
+        this.loggedIn$.next(value);
+        this.loggedIn = value;
+    };
+    SidebarComponent.prototype.logOut = function () {
+        console.log('logged out');
+        localStorage.removeItem('token');
+        this.setLoggedIn(false);
+        this.router.navigate(['/customer/login']);
+    };
+    return SidebarComponent;
+}());
+SidebarComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-sidebar',
+        template: __webpack_require__("../../../../../src/app/customer/sidebar/sidebar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/customer/sidebar/sidebar.component.css"), __webpack_require__("../../../../materialize-css/dist/css/materialize.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+], SidebarComponent);
+
+var _a, _b;
+//# sourceMappingURL=sidebar.component.js.map
 
 /***/ }),
 
@@ -379,7 +777,7 @@ var FooterComponent = (function () {
     return FooterComponent;
 }());
 FooterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-footer',
         template: __webpack_require__("../../../../../src/app/footer/footer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/footer/footer.component.css")]
@@ -399,7 +797,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\n\r\n/* Shared\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.button {\r\n  border-radius: 100px;\r\n}\r\n\r\n/* Sections\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.section {\r\n  padding: 5rem 0 3rem;\r\n  text-align: center;\r\n}\r\n.section-heading,\r\n.section-description {\r\n  margin-bottom: 4rem;\r\n}\r\n\r\n.section-heading {\r\n  padding-top: 5rem;\r\n}\r\n\r\n/* Hero\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.phones {\r\n  position: relative;\r\n}\r\n.phone {\r\n  position: relative;\r\n  max-width: 80%;\r\n  margin: 3rem auto -12rem;\r\n}\r\n.phone + .phone {\r\n  display: none;\r\n}\r\n.hero{\r\n  background: linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('/assets/images/bg-1.jpg');\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  padding-top: 10rem;\r\n}\r\n\r\n/* Pricing\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.pricing {\r\n  background-color: #fff;\r\n  background-size: cover;\r\n  color: #000080;\r\n  padding-bottom: 0.7rem;\r\n  border-radius: 50px;\r\n  box-shadow: 0px 1px 15px 1px #ccc;\r\n  margin-left: 9rem;\r\n  margin-right: 9rem;\r\n  margin-top: -9rem;\r\n  margin-bottom: 2rem;\r\n  z-index: 10; \r\n}\r\n.plan-title {\r\n  margin-bottom: 1rem;\r\n  color: #000080;\r\n}\r\n\r\n.plan-description {\r\n  opacity: .8;\r\n  font-weight: 300;\r\n}\r\n\r\n/* how it works\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.categories {\r\n  background: linear-gradient(0deg,rgba(0, 0, 128, 0.5),rgba(0, 0, 128, 0.5)),url('/assets/images/bg-2.jpg');\r\n  background-size: 100% auto;\r\n  background-color: #333;\r\n  color: #000080;\r\n}\r\n.categories .section-description { \r\n  margin-bottom: 4rem;\r\n}\r\n\r\n/* Bigger than 550 */\r\n@media (min-width: 550px) {\r\n  .section {\r\n    padding: 3rem 0 11rem;\r\n  }\r\n  .hero {\r\n    padding-bottom: 12rem;\r\n    text-align: left;\r\n    height: 165px;\r\n  }\r\n  .phone {\r\n    position: absolute;\r\n    top: -7rem;\r\n    right: 3rem;\r\n    max-height: 362px;\r\n    z-index: 3;\r\n  }\r\n  .phone + .phone {\r\n    top: -6rem;\r\n    display: block;\r\n    max-width: 73.8%;\r\n    right: 0;\r\n    z-index: 2;\r\n    max-height: 338px;\r\n  }\r\n  .hero-heading {\r\n    font-size: 2.4rem;\r\n  }\r\n}\r\n\r\n/* Bigger than 750 */\r\n@media (min-width: 750px) {\r\n  .hero {\r\n    height: 190px;\r\n  }\r\n  .hero-heading {\r\n    font-size: 2.6rem;\r\n  }\r\n  .section {\r\n    padding: 4.5rem 0 15rem;\r\n  }\r\n  .hero {\r\n    padding: 16rem 0 14rem;\r\n  }\r\n  .section-description {\r\n    max-width: 60%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n  }\r\n  .phone {\r\n    top: -14rem;\r\n    right: 5rem;\r\n    max-height: 510px;\r\n  }\r\n  .phone + .phone {\r\n    top: -12rem;\r\n    max-height: 472px;\r\n  }\r\n  .categories {\r\n    padding: 15rem 0 8rem;\r\n  }\r\n}\r\n\r\n/* Bigger than 1000 */\r\n@media (min-width: 1000px) {\r\n  .section {\r\n    padding: 6rem 0 19rem;\r\n  }\r\n  .hero {\r\n    padding: 22rem 0;\r\n  }\r\n  .hero-heading {\r\n    font-size: 3.0rem;\r\n  }\r\n  .phone {\r\n    top: -16rem;\r\n    max-height: 615px;\r\n  }\r\n  .phone + .phone {\r\n    top: -14rem;\r\n    max-height: 570px;\r\n  }\r\n}\r\n\r\n.plans{\r\n  background-color: #fff;\r\n  padding: 0.5rem;\r\n  border-radius: 30px;\r\n  box-shadow: 0px 1px 15px 1px #ccc;\r\n  color: #000080;\r\n}\r\n\r\n.why{\r\n  background-color: #fff;\r\n  padding: 12rem 3rem 3rem 3rem;\r\n  color: #000080;\r\n}\r\n\r\n.why p {\r\n  color: #333;\r\n}\r\n\r\n.why-img{\r\n  box-shadow: 0px 1px 15px 1px #ccc;\r\n}\r\n\r\n@media (max-width: 800px) {\r\n  .pricing {\r\n    padding-bottom: 0.8rem;\r\n    margin-left: 2rem;\r\n    margin-right: 2rem;\r\n    margin-top: 2rem;\r\n    margin-bottom: 2rem; \r\n  }\r\n  .why{\r\n    padding-top: 4.5rem;\r\n  }\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "\r\n\r\n/* Shared\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.button {\r\n  border-radius: 100px;\r\n}\r\n\r\n/* Sections\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.section {\r\n  padding: 5rem 0 3rem;\r\n  text-align: center;\r\n}\r\n.section-heading,\r\n.section-description {\r\n  margin-bottom: 4rem;\r\n}\r\n\r\n.section-heading {\r\n  padding-top: 5rem;\r\n}\r\n\r\n/* Hero\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.phones {\r\n  position: relative;\r\n}\r\n.phone {\r\n  position: relative;\r\n  max-width: 80%;\r\n  margin: 3rem auto -12rem;\r\n}\r\n.phone + .phone {\r\n  display: none;\r\n}\r\n.hero{\r\n  background: linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('/assets/images/bg-1.jpg');\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  padding-top: 10rem;\r\n}\r\n\r\n/* Pricing\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.pricing {\r\n  background-color: #fff;\r\n  background-size: cover;\r\n  color: #000080;\r\n  padding-bottom: 0.7rem;\r\n  border-radius: 50px;\r\n  box-shadow: 0px 1px 15px 1px #ccc;\r\n  margin-left: 9rem;\r\n  margin-right: 9rem;\r\n  /*margin-top: -9rem;*/\r\n  margin-top: 6rem;\r\n  margin-bottom: 5rem;\r\n  z-index: 10; \r\n}\r\n.plan-title {\r\n  margin-bottom: 1rem;\r\n  color: #000080;\r\n}\r\n\r\n.plan-description {\r\n  opacity: .8;\r\n  font-weight: 300;\r\n}\r\n\r\n/* how it works\r\n–––––––––––––––––––––––––––––––––––––––––––––––––– */\r\n.categories {\r\n  background: linear-gradient(0deg,rgba(0, 0, 128, 0.5),rgba(0, 0, 128, 0.5)),url('/assets/images/bg-2.jpg');\r\n  background-size: 100% auto;\r\n  background-color: #333;\r\n  color: #000080;\r\n}\r\n.categories .section-description { \r\n  margin-bottom: 4rem;\r\n}\r\n\r\n/* Bigger than 550 */\r\n@media (min-width: 550px) {\r\n  .section {\r\n    padding: 3rem 0 11rem;\r\n  }\r\n  .hero {\r\n    padding-bottom: 12rem;\r\n    text-align: left;\r\n    height: 165px;\r\n  }\r\n  .phone {\r\n    position: absolute;\r\n    top: -7rem;\r\n    right: 3rem;\r\n    max-height: 362px;\r\n    z-index: 3;\r\n  }\r\n  .phone + .phone {\r\n    top: -6rem;\r\n    display: block;\r\n    max-width: 73.8%;\r\n    right: 0;\r\n    z-index: 2;\r\n    max-height: 338px;\r\n  }\r\n  .hero-heading {\r\n    font-size: 2.4rem;\r\n  }\r\n}\r\n\r\n/* Bigger than 750 */\r\n@media (min-width: 750px) {\r\n  .hero {\r\n    height: 190px;\r\n  }\r\n  .hero-heading {\r\n    font-size: 2.6rem;\r\n  }\r\n  .section {\r\n    padding: 4.5rem 0 15rem;\r\n  }\r\n  .hero {\r\n    padding: 16rem 0 14rem;\r\n  }\r\n  .section-description {\r\n    max-width: 60%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n  }\r\n  .phone {\r\n    top: -14rem;\r\n    right: 5rem;\r\n    max-height: 510px;\r\n  }\r\n  .phone + .phone {\r\n    top: -12rem;\r\n    max-height: 472px;\r\n  }\r\n  .categories {\r\n    padding: 15rem 0 8rem;\r\n  }\r\n}\r\n\r\n/* Bigger than 1000 */\r\n@media (min-width: 1000px) {\r\n  .section {\r\n    padding: 6rem 0 19rem;\r\n  }\r\n  .hero {\r\n    padding: 22rem 0;\r\n  }\r\n  .hero-heading {\r\n    font-size: 3.0rem;\r\n  }\r\n  .phone {\r\n    top: -16rem;\r\n    max-height: 615px;\r\n  }\r\n  .phone + .phone {\r\n    top: -14rem;\r\n    max-height: 570px;\r\n  }\r\n}\r\n\r\n.plans{\r\n  background-color: #fff;\r\n  padding: 0.5rem;\r\n  border-radius: 30px;\r\n  box-shadow: 0px 1px 15px 1px #ccc;\r\n  color: #000080;\r\n}\r\n\r\n.why{\r\n  background-color: #fff;\r\n  padding: 12rem 3rem 3rem 3rem;\r\n  color: #000080;\r\n}\r\n\r\n.why p {\r\n  color: #333;\r\n}\r\n\r\n.why-img{\r\n  box-shadow: 0px 1px 15px 1px #ccc;\r\n}\r\n\r\n@media (max-width: 800px) {\r\n  .pricing {\r\n    padding-bottom: 0.8rem;\r\n    margin-left: 2rem;\r\n    margin-right: 2rem;\r\n    margin-top: 2rem;\r\n    margin-bottom: 2rem; \r\n  }\r\n  .why{\r\n    padding-top: 4.5rem;\r\n  }\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -412,7 +810,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing-page/landing-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div class=\"section hero\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"one-half column center\">\n          <h1 class=\"white-text\">IT'S THE SERVICE...</h1>\n          <h5 class=\"white-text\">Book Your Home Claning Today From &#8358;15,000 per Month</h5>\n          <div class=\"row\">\n            <div class=\"ten columns\">\n              <input class=\"u-full-width\" type=\"number\" placeholder=\"Enter phone number to start\" id=\"\" minlength=\"11\"  style=\"opacity: 0.8\">\n            </div>\n            <div class=\"two columns\">\n              <a class=\"button button-primary\" href=\"#\" style=\"opacity: 0.8\">Get Started</a>\n            </div>\n          </div>\n        </div>\n        <div class=\"one-half column phones\">\n          <img class=\"phone\" src=\"{{android}}\">\n          <img class=\"phone\" src=\"{{iphone}}\">\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"section pricing\">\n    <div class=\"container\">\n      <h3 class=\"section-heading\">Plans &amp; Pricing</h3>\n      <div class=\"row\">\n        <div class=\"plans one-third column\">\n          <h4 class=\"plan-title\">Daily</h4>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n          <label>Select Bedroom Type</label>\n          <select class=\"u-full-width\">\n            <option value=\"\">1 - 3 Bedrooms</option>\n            <option value=\"\">4 Bedrooms</option>\n            <option value=\"\">5 Bedrooms</option>\n          </select>\n          <a class=\"button\" href=\"#\">Book Now</a>\n        </div>\n\n        <div class=\"plans one-third column\">\n          <h4 class=\"plan-title\">Weekly</h4>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n          <label>Select Bedroom Type</label>\n          <select class=\"u-full-width\">\n            <option value=\"\">1 - 3 Bedrooms</option>\n            <option value=\"\">4 Bedrooms</option>\n            <option value=\"\">5 Bedrooms</option>\n          </select>\n          <a class=\"button\" href=\"#\">Book Now</a>\n        </div>\n\n        <div class=\"plans one-third column\">\n          <h4 class=\"plan-title\">Monthly</h4>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n          <label>Select Bedroom Type</label>\n          <select class=\"u-full-width\">\n            <option value=\"\">1 - 3 Bedrooms</option>\n            <option value=\"\">4 Bedrooms</option>\n            <option value=\"\">5 Bedrooms</option>\n          </select>\n          <a class=\"button\" href=\"#\">Book Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"section categories\">\n    <div class=\"container\">\n      <h3 class=\"section-heading white-text\">How It Works</h3>\n      <div class=\"row\">\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-ios-arrow-thin-right\"></i></h1>\n          <h5>Sign In</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-ios-bookmarks-outline\"></i></h1>\n          <h5>Choose Your Plan</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-card\"></i></h1>\n          <h5>Pay Securely</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-ios-paperplane\"></i></h1>\n          <h5>Enjoy Our Service</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n\n  <div class=\"section\">\n    <div class=\"container\">\n      <h3 class=\"section-heading primary-text\">Why Fichaya?</h3>\n        <div class=\"row\">\n          <div class=\"one-half column\">\n            <img src=\"{{why2}}\" class=\"why-img responsive-img\">\n          </div>\n          <div class=\"one-half column why\">\n            <h5>Professional And Trusted Cleaners</h5>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n            tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n        </div>\n        <br>\n        <div class=\"row\">\n          <div class=\"one-half column why\">\n            <h5>The BEST platform to find your cleaner</h5>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n            tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"one-half column\">\n            <img src=\"{{why1}}\" class=\"why-img responsive-img\">\n          </div>\n        </div>\n        <br>\n        <div class=\"row\">\n          <div class=\"one-half column\">\n            <img src=\"{{why3}}\" class=\"why-img responsive-img\">\n          </div>\n          <div class=\"one-half column why\">\n            <h5>Reliable Customer Service</h5>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n            tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n        </div>\n      \n    </div>\n  </div>\n\n\n  <div class=\"section\">\n    <div class=\"container\">\n      <h3 class=\"section-heading primary-text\">Testimonials</h3>\n        \n    </div>\n  </div>\n\n  <div class=\"section\" align=\"center\">\n    <h3 class=\"primary-text\">Get The BEST Cleaning Service You Need Today!</h3>\n    <a class=\"button button-primary\" href=\"#\">Get Started</a>\n    <br><br><br>\n  </div>\n\n<app-footer></app-footer>"
+module.exports = "\n  <app-navbar></app-navbar>\n  \n  <div class=\"section hero\">\n    <div class=\"container\">\n      <div class=\"row\">\n        <div class=\"one-half column center\">\n          <h1 class=\"white-text\">IT'S THE SERVICE...</h1>\n          <h5 class=\"white-text\">Book Your Home Claning Today From &#8358;15,000 per Month</h5>\n          <div class=\"row\">\n            <div class=\"ten columns\">\n              <input class=\"u-full-width\" type=\"number\" placeholder=\"Enter phone number to start\" id=\"\" minlength=\"11\"  style=\"opacity: 0.8\">\n            </div>\n            <div class=\"two columns\">\n              <a class=\"button button-primary\" href=\"#\" style=\"opacity: 0.8\">Get Started</a>\n            </div>\n          </div>\n        </div>\n        <div class=\"one-half column phones\">\n          <img class=\"phone\" src=\"{{android}}\">\n          <img class=\"phone\" src=\"{{iphone}}\">\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"section pricing\">\n    <div class=\"container\">\n      <h3 class=\"section-heading\">Plans &amp; Pricing</h3>\n      <div class=\"row\">\n        <div class=\"plans one-third column\">\n          <h4 class=\"plan-title\">Daily</h4>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n          <label>Select Bedroom Type</label>\n          <select class=\"u-full-width\">\n            <option value=\"\">1 - 3 Bedrooms</option>\n            <option value=\"\">4 Bedrooms</option>\n            <option value=\"\">5 Bedrooms</option>\n          </select>\n          <a class=\"button\" href=\"#\">Book Now</a>\n        </div>\n\n        <div class=\"plans one-third column\">\n          <h4 class=\"plan-title\">Weekly</h4>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n          <label>Select Bedroom Type</label>\n          <select class=\"u-full-width\">\n            <option value=\"\">1 - 3 Bedrooms</option>\n            <option value=\"\">4 Bedrooms</option>\n            <option value=\"\">5 Bedrooms</option>\n          </select>\n          <a class=\"button\" href=\"#\">Book Now</a>\n        </div>\n\n        <div class=\"plans one-third column\">\n          <h4 class=\"plan-title\">Monthly</h4>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n          <label>Select Bedroom Type</label>\n          <select class=\"u-full-width\">\n            <option value=\"\">1 - 3 Bedrooms</option>\n            <option value=\"\">4 Bedrooms</option>\n            <option value=\"\">5 Bedrooms</option>\n          </select>\n          <a class=\"button\" href=\"#\">Book Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"section categories\">\n    <div class=\"container\">\n      <h3 class=\"section-heading white-text\">How It Works</h3>\n      <div class=\"row\">\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-ios-arrow-thin-right\"></i></h1>\n          <h5>Sign In</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-ios-bookmarks-outline\"></i></h1>\n          <h5>Choose Your Plan</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-card\"></i></h1>\n          <h5>Pay Securely</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n\n        <div class=\"plans three columns\">\n          <h1 class=\"plan-title\"><i class=\"ion-ios-paperplane\"></i></h1>\n          <h5>Enjoy Our Service</h5>\n          <p class=\"plan-description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n        </div>\n      </div>\n      \n    </div>\n  </div>\n\n  <div class=\"section\">\n    <div class=\"container\">\n      <h3 class=\"section-heading primary-text\">Why Fichaya?</h3>\n        <div class=\"row\">\n          <div class=\"one-half column\">\n            <img src=\"{{why2}}\" class=\"why-img responsive-img\">\n          </div>\n          <div class=\"one-half column why\">\n            <h5>Professional And Trusted Cleaners</h5>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n            tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n        </div>\n        <br>\n        <div class=\"row\">\n          <div class=\"one-half column why\">\n            <h5>The BEST platform to find your cleaner</h5>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n            tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n          <div class=\"one-half column\">\n            <img src=\"{{why1}}\" class=\"why-img responsive-img\">\n          </div>\n        </div>\n        <br>\n        <div class=\"row\">\n          <div class=\"one-half column\">\n            <img src=\"{{why3}}\" class=\"why-img responsive-img\">\n          </div>\n          <div class=\"one-half column why\">\n            <h5>Reliable Customer Service</h5>\n            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n            tempor incididunt ut labore et dolore magna aliqua.</p>\n          </div>\n        </div>\n      \n    </div>\n  </div>\n\n\n  <div class=\"section\">\n    <div class=\"container\">\n      <h3 class=\"section-heading primary-text\">Testimonials</h3>\n        \n    </div>\n  </div>\n\n  <div class=\"section\" align=\"center\">\n    <h3 class=\"primary-text\">Get The BEST Cleaning Service You Need Today!</h3>\n    <a class=\"button button-primary\" href=\"#\">Get Started</a>\n    <br><br><br>\n  </div>\n\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -447,7 +845,7 @@ var LandingPageComponent = (function () {
     return LandingPageComponent;
 }());
 LandingPageComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'landing-page',
         template: __webpack_require__("../../../../../src/app/landing-page/landing-page.component.html"),
         styles: [__webpack_require__("../../../../../src/app/landing-page/landing-page.component.css")]
@@ -548,7 +946,7 @@ var NavbarComponent = (function () {
     return NavbarComponent;
 }());
 NavbarComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-navbar',
         template: __webpack_require__("../../../../../src/app/navbar/navbar.component.html"),
         styles: [__webpack_require__("../../../../../src/app/navbar/navbar.component.css")]
@@ -557,6 +955,217 @@ NavbarComponent = __decorate([
 ], NavbarComponent);
 
 //# sourceMappingURL=navbar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/auth.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__api__ = __webpack_require__("../../../../../src/app/api.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AuthService = (function () {
+    function AuthService(_http) {
+        this._http = _http;
+        this.api = new __WEBPACK_IMPORTED_MODULE_4__api__["a" /* Api */]().endpoint;
+    }
+    AuthService.prototype.registerCustomer = function (customer) {
+        var header = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        header.append('Content-Type', 'application/json');
+        return this._http.post(this.api + '/customer/register', customer, { headers: header })
+            .map(function (res) { return res.json(); });
+    };
+    AuthService.prototype.loginCustomerEmail = function (customer) {
+        var header = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        header.append('Content-Type', 'application/json');
+        return this._http.post(this.api + '/customer/login', customer, { headers: header })
+            .map(function (res) { return res.json(); });
+    };
+    AuthService.prototype.loginCustomerPhone = function (customer) {
+        var header = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        header.append('Content-Type', 'application/json');
+        return this._http.post(this.api + '/customer/login_phone', customer, { headers: header })
+            .map(function (res) { return res.json(); });
+    };
+    AuthService.prototype.loggedIn = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])();
+    };
+    return AuthService;
+}());
+AuthService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], AuthService);
+
+var _a;
+//# sourceMappingURL=auth.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/authguard.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuardService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthGuardService = (function () {
+    function AuthGuardService(_auth, _router) {
+        this._auth = _auth;
+        this._router = _router;
+    }
+    AuthGuardService.prototype.canActivate = function () {
+        if (this._auth.loggedIn()) {
+            return true;
+        }
+        else {
+            this._router.navigate(['/customer/login']);
+            return false;
+        }
+    };
+    return AuthGuardService;
+}());
+AuthGuardService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+], AuthGuardService);
+
+var _a, _b;
+//# sourceMappingURL=authguard.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/routeguard.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RouteGuardService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RouteGuardService = (function () {
+    function RouteGuardService(_auth, _router) {
+        this._auth = _auth;
+        this._router = _router;
+    }
+    RouteGuardService.prototype.canActivate = function () {
+        if (this._auth.loggedIn()) {
+            this._router.navigate(['/customer/dashboard']);
+        }
+        return true;
+    };
+    return RouteGuardService;
+}());
+RouteGuardService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+], RouteGuardService);
+
+var _a, _b;
+//# sourceMappingURL=routeguard.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/validator.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidatorService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ValidatorService = (function () {
+    function ValidatorService() {
+    }
+    ValidatorService.prototype.ValidateEmail = function (email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    };
+    ValidatorService.prototype.ValidateLoginEmail = function (customer) {
+        if (customer.email == undefined || customer.password == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidatorService.prototype.ValidatePhone = function (phone) {
+        if (phone.length != 11) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidatorService.prototype.ValidateLoginPhone = function (customer) {
+        if (customer.phone == undefined || customer.password == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    return ValidatorService;
+}());
+ValidatorService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [])
+], ValidatorService);
+
+//# sourceMappingURL=validator.service.js.map
 
 /***/ }),
 
@@ -591,7 +1200,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map

@@ -20,6 +20,8 @@ import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/authguard.service';
 import { RouteGuardService } from './services/routeguard.service';
 import { SidebarComponent } from './customer/sidebar/sidebar.component';
+import { BookingHistoryComponent } from './customer/booking-history/booking-history.component';
+import { AccountSettingsComponent } from './customer/account-settings/account-settings.component';
 
 
 const routes: Routes = [
@@ -27,7 +29,9 @@ const routes: Routes = [
   { path: 'index',  component: LandingPageComponent },
   { path: 'customer/login',  component: LoginComponent, canActivate: [RouteGuardService] },
   { path: 'customer/register',  component: RegisterComponent, canActivate: [RouteGuardService] },
-  { path: 'customer/dashboard',  component: DashboardComponent, canActivate: [AuthGuardService] }
+  { path: 'customer/dashboard',  component: DashboardComponent, canActivate: [AuthGuardService] },
+  { path: 'customer/booking',  component: BookingHistoryComponent, canActivate: [AuthGuardService] },
+  { path: 'customer/account',  component: AccountSettingsComponent, canActivate: [AuthGuardService] }
 ];
 
 @NgModule({
@@ -39,7 +43,9 @@ const routes: Routes = [
     RegisterComponent,
     FooterComponent,
     DashboardComponent,
-    SidebarComponent
+    SidebarComponent,
+    BookingHistoryComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,

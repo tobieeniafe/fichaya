@@ -7,14 +7,14 @@ declare var jQuery: any;
 declare var $: any;
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
+  selector: 'app-account-settings',
+  templateUrl: './account-settings.component.html',
+  styleUrls: ['./account-settings.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
 })
-export class DashboardComponent implements OnInit {
+export class AccountSettingsComponent implements OnInit {
 
-	title: string = 'Dashboard'
-	
+	title: string = 'Account Settings'
+
 	constructor(public _auth:AuthService, private router: Router) {
 		$(document).ready(function(){
 			
@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
 			    }
 			);
 
-			//$('.side-nav-open').sideNav('show');
+			$('select').material_select();
 
 			//change hamburger content
 			$(".side-nav-open").click(function(){

@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit {
 	constructor(public _auth:AuthService, private router: Router) {
 		$(document).ready(function(){
 	
-			//$('.side-nav-close').sideNav('hide');
+			// $('.side-nav-close').sideNav('show');
 
 		});
 

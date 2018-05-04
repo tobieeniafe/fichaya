@@ -7,14 +7,14 @@ declare var jQuery: any;
 declare var $: any;
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
+  selector: 'app-booking-history',
+  templateUrl: './booking-history.component.html',
+  styleUrls: ['./booking-history.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
 })
-export class DashboardComponent implements OnInit {
+export class BookingHistoryComponent implements OnInit {
 
-	title: string = 'Dashboard'
-	
+	title: string = 'Booking History'
+
 	constructor(public _auth:AuthService, private router: Router) {
 		$(document).ready(function(){
 			

@@ -21,6 +21,12 @@
     display: none;
 }
 
-.side-nav-open, h3{
+.table-body{
+    box-shadow: 0px 1px 15px 1px #ccc;
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+.side-nav-open, h3, th{
     color: #000080;
 }

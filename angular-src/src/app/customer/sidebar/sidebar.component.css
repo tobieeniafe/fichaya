@@ -1,9 +1,23 @@
 .side-nav {
 	background-color: #000080 !important;
 	color: #fff;
-	padding-top: 5rem;
+	padding-top: 2rem;
 }
 
-.side-nav li a h4 {
+.side-nav li a h5 {
 	color: #fff !important;
+}
+
+.ion{
+	font-size: 25px;
+}
+
+.avatar{
+	width: 150px;
+	height: 150px;
+}
+
+.logout: hover{
+	color: #000080;
+	background-color: #fff;	
 }
