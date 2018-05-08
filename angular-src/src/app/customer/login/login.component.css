@@ -6,12 +6,12 @@
   background-color: #111;
   padding-top: 12rem;
   text-align: center;
-  min-height: 80%;
+  min-height: 100%;
 }
 
-.form{
+.form-body{
 	background-color: #fff;
-	padding: 5rem;
+	padding: 2rem 5rem !important;
 }
 
 @media only screen and (max-width: 450px) {
@@ -19,8 +19,7 @@
     padding-top: 5rem;
     min-height: 100%;
   }
-}
-
-.withphone{
-  display: none;
+  .form-body{
+    padding: 1rem 2rem !important;
+  }
 }

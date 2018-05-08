@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
 
 				// Sticky Header
 				$(window).scroll(function() {
-
 				    if ($(window).scrollTop() > 100) {
 				        $('.main_h').addClass('sticky');
 				    } else {

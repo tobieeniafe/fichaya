@@ -22,6 +22,7 @@ import { RouteGuardService } from './services/routeguard.service';
 import { SidebarComponent } from './customer/sidebar/sidebar.component';
 import { BookingHistoryComponent } from './customer/booking-history/booking-history.component';
 import { AccountSettingsComponent } from './customer/account-settings/account-settings.component';
+import { GetStartedComponent } from './get-started/get-started.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'customer/register',  component: RegisterComponent, canActivate: [RouteGuardService] },
   { path: 'customer/dashboard',  component: DashboardComponent, canActivate: [AuthGuardService] },
   { path: 'customer/booking',  component: BookingHistoryComponent, canActivate: [AuthGuardService] },
-  { path: 'customer/account',  component: AccountSettingsComponent, canActivate: [AuthGuardService] }
+  { path: 'customer/account',  component: AccountSettingsComponent, canActivate: [AuthGuardService] },
+  { path: 'get-started',  component: GetStartedComponent }
 ];
 
 @NgModule({
@@ -45,7 +47,8 @@ const routes: Routes = [
     DashboardComponent,
     SidebarComponent,
     BookingHistoryComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    GetStartedComponent
   ],
   imports: [
     BrowserModule,

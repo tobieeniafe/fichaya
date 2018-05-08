@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location} from '@angular/common';
-import * as $ from 'jquery';
-import * as jQuery from 'jquery';
 import { AuthService } from '../../services/auth.service';
 import { ValidatorService } from '../../services/validator.service';
+declare var Materialize: any;
+declare var $: any;
 
 
 @Component({
@@ -14,90 +14,90 @@ import { ValidatorService } from '../../services/validator.service';
 })
 export class LoginComponent implements OnInit {
 
-	email: string;
-	password1: string;
-	phone: string;
-	password2: string;
+	loginvalue: string;
+	password: string;
+	
 
   constructor(private router: Router, private _auth:AuthService, private _validateService: ValidatorService) {
 		$(document).ready(function(){
-		    $(".viewphone").click(function(){
-		        $(".withmail").hide(1);
-		        $(".withphone").fadeIn(5000);
-		    });
-		    $(".viewmail").click(function(){
-		        $(".withphone").hide(1);
-		        $(".withmail").fadeIn(5000);
-		    });
+		    
 		});
 	}
 
 	ngOnInit() {}
 
+	submitForm(){
+		if (this._validateService.ValidateEmail(this.loginvalue)) { 
+			this.submitEmailForm();
+		} else {
+			this.submitPhoneForm();
+		}
+	}
+
 	submitEmailForm(){
 		const customer = {
-			email: this.email,
-			password: this.password1
+			email: this.loginvalue,
+			password: this.password
 		}
 		
 		if(!this._validateService.ValidateEmail(customer.email)){
-		  console.log("Invalid email");
+		  Materialize.toast('Invalid email', 3000, 'red white-text');
 		  return false;
 		}
 
 		if(!this._validateService.ValidateLoginEmail(customer)){
-		  console.log("Invalid login prarameters");
+		  Materialize.toast('Invalid login parameters', 3000, 'red white-text');
 		  return false;
 		}
 
 		this._auth.loginCustomerEmail(customer).subscribe(
 	        data => {
 	          if(data.success == false){
-	            console.log(data.message);
+	            Materialize.toast(data.message, 3000, 'red white-text');
 	          }else if (data.success == true){
-	          	console.log(data.message);
+	          	Materialize.toast(data.message, 3000, 'green white-text');
 	          	localStorage.setItem('token', data.token);
 	            this.router.navigate(['/customer/dashboard']);
 	          }else{
-	          	console.log(data);
+	          	Materialize.toast('uh-oh', 3000, 'red white-text');
 	            this.router.navigate(['/customer/login']);
 	          }
 	        },
-	        err => (console.log('error')),
+	        err => (Materialize.toast("something's not right", 3000, 'red white-text')),
 	        () =>  console.log()
 	    );
 	}
 
 	submitPhoneForm(){
 		const customer = {
-			phone: this.phone,
-			password: this.password2
+			phone: this.loginvalue,
+			password: this.password
 		}
 
 		if(!this._validateService.ValidatePhone(customer.phone)){
-		  console.log("Invalid phone number" + customer.phone.toString().length);
+		  Materialize.toast("Invalid phone number", 3000, 'red white-text');
 		  return false;
 		}
 
 		if(!this._validateService.ValidateLoginPhone(customer)){
-		  console.log("Invalid login prarameters");
+		  Materialize.toast("Invalid login prarameters", 3000, 'red white-text')
 		  return false;
 		}
 
 		this._auth.loginCustomerPhone(customer).subscribe(
 	        data => {
 	          if(data.success == false){
-	            console.log(data.message);
+	            Materialize.toast(data.message, 3000, 'red white-text');
 	          }else if (data.success == true){
-	          	console.log(data.message);
+	          	Materialize.toast(data.message, 3000, 'green white-text');
 	          	localStorage.setItem('token', data.token);
 	            this.router.navigate(['/customer/dashboard']);
 	          }else{
-	          	console.log(data);
+	          	Materialize.toast('uh-oh', 3000, 'red white-text');
 	            this.router.navigate(['/customer/login']);
 	          }
 	        },
-	        err => (console.log('error')),
+	        err => (Materialize.toast("something's not right", 3000, 'red white-text')),
 	        () =>  console.log()
 	    );
 	}

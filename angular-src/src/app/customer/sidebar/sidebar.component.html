@@ -1,15 +1,13 @@
 
 <ul id="slide-out" class="side-nav" align="center">
     <li><img src="{{avatar}}" class="circle avatar"></li>
-    <li class="white-text"><h4>Firstname Lastname</h4></li>
-    <li><a routerLink="/customer/dashboard"><h5>Dashboard <i class="ion ion-ios-speedometer-outline"></i></h5></a></li>
-    <li><a routerLink="/customer/booking"><h5>Booking History <i class="ion ion-ios-clock-outline"></i></h5></a></li>
-    <li><a routerLink="/customer/account"><h5>Account Settings <i class="ion ion-ios-gear-outline"></i></h5></a></li>
-    <li><a routerLink=""><h5>Become An Associate <i class="ion ion-ios-personadd"></i></h5></a></li>
+    <li class="white-text"><h5>{{name}}</h5></li>
+    <li><a routerLink="/customer/dashboard"><h6>Dashboard <i class="ion ion-ios-speedometer-outline"></i></h6></a></li>
+    <li><a routerLink=""><h6>New Booking <i class="ion ion-ios-bookmarks-outline"></i></h6></a></li>
+    <li><a routerLink="/customer/booking"><h6>Booking History <i class="ion ion-ios-clock-outline"></i></h6></a></li>
+    <li><a routerLink="/customer/account"><h6>Account Settings <i class="ion ion-ios-gear-outline"></i></h6></a></li>
+    
     <br>
-    <button class="button logout" (click)='logOut()' style="color: #fff; border: 2px solid #fff">Logout</button>
+    <button class="btn logout" (click)='logOut()' style="color: #fff; border: 2px solid #fff">Logout</button>
 </ul>
-  
-  
-
   

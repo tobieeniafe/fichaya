@@ -4,12 +4,12 @@
 	padding-top: 2rem;
 }
 
-.side-nav li a h5 {
+.side-nav li a h6 {
 	color: #fff !important;
 }
 
 .ion{
-	font-size: 25px;
+	font-size: 30px;
 }
 
 .avatar{
@@ -18,6 +18,10 @@
 }
 
 .logout: hover{
-	color: #000080;
+	color: #000080 !important;
 	background-color: #fff;	
+}
+
+li a h6 {
+	font-size: 20px;
 }

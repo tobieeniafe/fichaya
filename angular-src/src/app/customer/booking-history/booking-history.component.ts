@@ -9,7 +9,7 @@ declare var $: any;
 @Component({
   selector: 'app-booking-history',
   templateUrl: './booking-history.component.html',
-  styleUrls: ['./booking-history.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
+  styleUrls: ['./booking-history.component.css']
 })
 export class BookingHistoryComponent implements OnInit {
 
@@ -28,14 +28,6 @@ export class BookingHistoryComponent implements OnInit {
 			      onClose: function(el) { /* Do Stuff*/ }
 			    }
 			);
-
-			//$('.side-nav-open').sideNav('show');
-
-			//change hamburger content
-			$(".side-nav-open").click(function(){
-			    $('.ion-navicon').toggle();
-			    $('.ion-ios-close').toggle();
-			});
 
 		});
 	}

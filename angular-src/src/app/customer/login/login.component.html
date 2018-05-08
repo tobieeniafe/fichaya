@@ -2,34 +2,27 @@
 <app-navbar></app-navbar>
 
 <div class="back">
-  <div class="container">
-  	<div class="row">
-	    <div class="one-half column white-text"><h4 style="padding-top: 10rem">Become a partner with fichaya and make money cleaning.</h4></div>
+  <div class="container row">
+	    <div class="col m6 s12 white-text"><h4 style="padding-top: 5rem">Become a partner with fichaya and make money cleaning.</h4></div>
 
-	    <div class="one-half column form" align="center">
-	    	<div class="withmail">
-	    		<h3 class="primary-text">Customer Login</h3>
-		    	<form class="row" (submit)="submitEmailForm()">
-		    		<input class="u-full-width" type="email" placeholder="email" name="email" [(ngModel)]="email" required="">
-		    		<input class="u-full-width" type="password" placeholder="password" name="password1" [(ngModel)]="password1" required="">
-		    		<button class="button button-primary" type="submit">Login</button>
+	    <div class="col m6 s12 form-body" align="center">
+	    		<h4 class="primary-text">Customer Login</h4>
+		    	<form class="row" (submit)="submitForm()">
+		    		<div class="input-field col m12 s12">
+					    <input class="" type="text" placeholder="email or phone number" name="loginvalue" [(ngModel)]="loginvalue" required="">
+					</div>
+					<div class="input-field col m12 s12">
+					    <input class="" type="password" placeholder="password" name="password" [(ngModel)]="password" required="">
+					</div>
+					<div class="input-field col m12 s12">
+		    			<button class="btn btn-primary" type="submit">Login</button>
+		    		</div>
 		    	</form>
-		    	<button class="button button-primary viewphone" style="opacity: 0.8">Login with phone number</button>
-	    	</div>
-
-	    	<div class="withphone">
-	    		<h3 class="primary-text">Customer Login</h3>
-		    	<form class="row" novalidate="" (submit)="submitPhoneForm()">
-		    		<input class="u-full-width" type="text" placeholder="phone number" name="phone" [(ngModel)]="phone">
-		    		<input class="u-full-width" type="password" placeholder="password" name="password2" [(ngModel)]="password2">
-		    		<button class="button button-primary" type="submit">Login</button>
-		    	</form>
-		    	<button class="button button-primary viewmail" style="opacity: 0.8">Login with email</button>		    	
-	    	</div>
-	    	<br>
+	    	<!-- <br> -->
 	    	<h6>Not yet registered? <a routerLink="/customer/register">Register now</a></h6>
 
 	    </div>
-    </div>
   </div>
 </div>
+
+					

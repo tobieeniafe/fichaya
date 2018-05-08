@@ -5,61 +5,42 @@
         <div class="container">
             <h3 style="padding-left: 10rem"><a href="#" data-activates="slide-out" class="side-nav-open">
             	<i class="ion-navicon"></i>
-            	<i class="ion-ios-close"></i>
             </a></h3>
-            <h3>{{title}}</h3>
+            <h4>{{title}}</h4>
             <br><br>
 
             <div class="row table-body"><form>
                 <h5>Personal Information</h5>
                 
-                <div class="input-field col s6">
+                <div class="input-field col m6 s12">
                   <input type="text" class="validate" placeholder="Firstname">
                 </div>
-                <div class="input-field col s6">
+                <div class="input-field col m6 s12">
                   <input type="text" class="validate" placeholder="Lastname">
                 </div>
-                <div class="input-field col s3">
-                  <input type="text" class="validate" placeholder="Phone Number">
-                </div>
-                <div class="input-field col s6">
+                <div class="input-field col m6 s12">
                   <input type="text" class="validate" placeholder="Email">
                 </div>
-                <div class="input-field col s3">
-                  <input type="text" class="validate" placeholder="Plan">
+                <div class="input-field col m3 s12">
+                  <input type="text" class="validate" placeholder="Phone Number">
                 </div>
-                <div class="input-field col s12">
+                <div class="input-field col m3 s12">
+                    <select>
+                      <option value="" disabled selected>Plan</option>
+                      <option value="">Daily</option>
+                      <option value="">Weekly</option>
+                      <option value="">Monthly</option>
+                    </select>
+                </div>
+                <div class="input-field col m12 s12">
                   <input type="text" class="validate" placeholder="Address">
                 </div>
                 <div class="col s12 center" style="padding-top: 10px">
-                    <button class="button button-primary" type="">Update</button>
+                    <button class="btn btn-primary" type="">Update</button>
                 </div>
             </form></div>
 
             <br><br>
-
-            <div class="row table-body"><form>
-                <h5>Payment Settings</h5>
-                
-                <div class="input-field col s6">
-                  <input type="text" class="validate" placeholder="Card Number">
-                </div>
-                <div class="input-field col s6">
-                  <input type="text" class="validate" placeholder="Card Holder">
-                </div>
-                <div class="input-field col s2">
-                  <input type="text" class="validate" placeholder="CVV2">
-                </div>
-                <div class="input-field col s1">
-                  <input type="text" class="validate" placeholder="MM">
-                </div>
-                <div class="input-field col s1">
-                  <input type="text" class="validate" placeholder="YY">
-                </div>
-                <div class="col s12 center" style="padding-top: 10px">
-                    <button class="button button-primary" type="">Add Card</button>
-                </div>
-            </form></div>
 
         </div>      
     </div>

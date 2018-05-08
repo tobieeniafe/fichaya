@@ -28,3 +28,9 @@
     padding: 3rem;
     border-radius: 15px;
 }
+
+@media only screen and (max-width: 450px) {
+    .table-body{
+        padding: 1rem;
+    }
+}

@@ -9,7 +9,7 @@ declare var $: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
@@ -28,14 +28,6 @@ export class DashboardComponent implements OnInit {
 			      onClose: function(el) { /* Do Stuff*/ }
 			    }
 			);
-
-			//$('.side-nav-open').sideNav('show');
-
-			//change hamburger content
-			$(".side-nav-open").click(function(){
-			    $('.ion-navicon').toggle();
-			    $('.ion-ios-close').toggle();
-			});
 
 		});
 	}

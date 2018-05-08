@@ -9,7 +9,7 @@ declare var $: any;
 @Component({
   selector: 'app-account-settings',
   templateUrl: './account-settings.component.html',
-  styleUrls: ['./account-settings.component.css', '../../../../node_modules/materialize-css/dist/css/materialize.css']
+  styleUrls: ['./account-settings.component.css']
 })
 export class AccountSettingsComponent implements OnInit {
 
@@ -30,12 +30,6 @@ export class AccountSettingsComponent implements OnInit {
 			);
 
 			$('select').material_select();
-
-			//change hamburger content
-			$(".side-nav-open").click(function(){
-			    $('.ion-navicon').toggle();
-			    $('.ion-ios-close').toggle();
-			});
 
 		});
 	}
