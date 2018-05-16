@@ -23,6 +23,9 @@ import { SidebarComponent } from './customer/sidebar/sidebar.component';
 import { BookingHistoryComponent } from './customer/booking-history/booking-history.component';
 import { AccountSettingsComponent } from './customer/account-settings/account-settings.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { SidebarService } from './customer/sidebar/sidebar.service';
+import { AccountSettingsService } from './customer/account-settings/account-settings.service';
+import { GetStartedService } from './get-started/get-started.service';
 
 
 const routes: Routes = [
@@ -58,7 +61,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ImageUploadModule.forRoot()
   ],
-  providers: [ValidatorService, AuthService, AuthGuardService, RouteGuardService],
+  providers: [ValidatorService, AuthService, AuthGuardService, RouteGuardService, SidebarService, AccountSettingsService, GetStartedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

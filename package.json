@@ -8,8 +8,8 @@
     "start": "node app",
     "start-angular": "cd angular-src && ng serve",
     "build": "cd angular-src && ng build",
-    "deploy": "git add . && git commit -m 'deploy' && git push origin master && git push heroku master",
-    "deploy-prod": "cd angular-src && ng build --env=prod && cd .. && git add . && git commit -m 'prod' && git push origin master && git push heroku master"
+    "deploy": "git add . && git commit -m 'deploy' && git push github master && git push heroku master", // origin is bitbucket
+    "deploy-prod": "cd angular-src && ng build --env=prod && cd .. && git add . && git commit -m 'prod' && git push github master && git push heroku master"
   },
   "repository": {
     "type": "git",
