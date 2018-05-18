@@ -76,7 +76,7 @@
 	<!-- =====
 		STEP 2 START
 		====== -->
-	<div class="row center step2">
+	<div class="row step2 center">
 		<div class="col m4 s4">
 			<a class="btn-floating btn-large waves-effect waves-light"><h5>1</h5></a>
 			<hr style="height: 10px; background-color: #000080">
@@ -91,7 +91,7 @@
 		</div>
 		
 		<div class="row">
-			<h4>Set Cleaning Details</h4>
+			<h4 class="center">Set Cleaning Details</h4>
 
 			<div class="input-field col m6 s12">
                 <input type="text" placeholder="House Address" name="address" [(ngModel)]="address">
@@ -125,7 +125,10 @@
             <div class="input-field col m3 s12">
                 <input type="text" placeholder="Phone Number" name="phone" [(ngModel)]="phone">
             </div>
-            <div class="input-field col m12 s12">
+            <div class="input-field col m6 s12">
+                <input type="text" placeholder="Email" name="email" [(ngModel)]="email">
+            </div>
+            <div class="input-field col m12 s12 center">
             	<button class="btn-large show1" type="button">Back <i class="ion-ios-arrow-thin-left"></i></button>
                 <button class="btn-large" type="submit">Checkout <i class="ion-ios-cart"></i></button>
             </div>
@@ -142,6 +145,14 @@
 <!-- =====
 	FORM END
 	====== -->
+			<div class="input-field col m12 s12">
+                <button class="btn-large" 
+					angular-rave
+					[raveOptions]="paymentOptions"
+					(close)="paymentCancel()"
+					(callback)="paymentDone($event)"
+				>Checkout <i class="ion-ios-cart"></i></button>
+            </div>
 
 
 </div>

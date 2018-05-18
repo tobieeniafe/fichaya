@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { ImageUploadModule } from 'angular2-image-upload';
+import { AngularRaveModule } from 'angular-rave';
 
 
 import { AppComponent } from './app.component';
@@ -58,6 +59,7 @@ const routes: Routes = [
     FormsModule,
     HttpModule,
     CommonModule,
+    AngularRaveModule,
     RouterModule.forRoot(routes),
     ImageUploadModule.forRoot()
   ],
