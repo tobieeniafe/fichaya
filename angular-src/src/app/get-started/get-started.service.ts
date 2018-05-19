@@ -1,56 +1,57 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Api } from '../api';
 
 @Injectable()
 export class GetStartedService {
 
-	http: Http;
 	token: any;
 	api = new Api().endpoint
-
-	constructor(public _http: Http) {
-	    this.http = _http;
+	
+	constructor(private http: HttpClient) {
+	    this.http = http;
 	    this.token = localStorage.getItem('token');
 	}
 
 	createGig(gig) {
-	    let headers = new Headers({'Content-Type': 'application/json'});
-	    this.token = localStorage.getItem('token');
-	    headers.append('x-access-token', this.token );
-	    return this.http.post(this.api+'/customer/create_gig', gig, {headers: headers})
-	    .map(res => {
-	        return res.json();
-	    });
+		this.token = localStorage.getItem('token');
+	    let httpOptions = {
+		  headers: new HttpHeaders({
+		    'Content-Type':  'application/json',
+		    'x-access-token': this.token 
+		  })
+		};
+	    return this.http.post(this.api+'/customer/create_gig', gig, httpOptions)
+	}
+
+	getCleanerDetails(cleaner_id) {
+		this.token = localStorage.getItem('token');
+	    let httpOptions = {
+		  headers: new HttpHeaders({
+		    'Content-Type':  'application/json',
+		    'x-access-token': this.token 
+		  })
+		};
+	    return this.http.post(this.api+'/customer/view_cleaner', cleaner_id, httpOptions)
 	}
 
 	registerGuest(guest) {
-	    let headers = new Headers({'Content-Type': 'application/json'});
-	    return this.http.post(this.api+'/customer/register', guest, {headers: headers})
-	    .map(res => {
-	        return res.json();
-	    });
+	    let httpOptions = {
+		  headers: new HttpHeaders({
+		    'Content-Type':  'application/json'
+		  })
+		};
+	    return this.http.post(this.api+'/customer/register', guest, httpOptions)
 	}
 
-
-
-	confirmPayment(response: object): void {
-		console.log(response);
+	validateBookingDetails(booking, phone){
+	    if(booking.address == undefined || booking.busstop == undefined || booking.location == undefined || booking.time == undefined || booking.date == undefined || booking.email == undefined || phone == undefined){
+	      return false
+	    }else{
+	      return true
+	    }
 	}
 
-	cancelledPayment(): void {
-		console.log('close');
-	}
-
-	generateReference(): string {
-		let text = '';
-		const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-		for (let i = 0; i < 10; i++) {
-			text += possible.charAt(Math.floor(Math.random() * possible.length));
-		}
-		return text;
-	}
 
 }
 

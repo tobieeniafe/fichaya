@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Http, Headers } from '@angular/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { AuthService } from '../../services/auth.service';
 import { SidebarService } from './sidebar.service';
@@ -23,7 +22,7 @@ export class SidebarComponent implements OnInit {
 	
 	ngOnInit() {}
 
-	constructor(public _auth:AuthService, private router: Router, private http: Http, private sidebarService: SidebarService) {
+	constructor(public _auth:AuthService, private router: Router, private sidebarService: SidebarService) {
 		this.getUser()
 	}
 
@@ -42,7 +41,7 @@ export class SidebarComponent implements OnInit {
 
 	getUser(){
 	    this.sidebarService.getUserName().subscribe(
-	       data => {
+	       (data: any) => {
 	        if (data.success == true) { 
 	           this.user = data.customer.name;
 	        } else {

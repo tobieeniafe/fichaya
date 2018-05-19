@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { ImageUploadModule } from 'angular2-image-upload';
@@ -27,6 +27,7 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { SidebarService } from './customer/sidebar/sidebar.service';
 import { AccountSettingsService } from './customer/account-settings/account-settings.service';
 import { GetStartedService } from './get-started/get-started.service';
+import { BookingHistoryService } from './customer/booking-history/booking-history.service';
 
 
 const routes: Routes = [
@@ -57,13 +58,13 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     CommonModule,
     AngularRaveModule,
     RouterModule.forRoot(routes),
     ImageUploadModule.forRoot()
   ],
-  providers: [ValidatorService, AuthService, AuthGuardService, RouteGuardService, SidebarService, AccountSettingsService, GetStartedService],
+  providers: [ValidatorService, AuthService, AuthGuardService, RouteGuardService, SidebarService, AccountSettingsService, GetStartedService, BookingHistoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

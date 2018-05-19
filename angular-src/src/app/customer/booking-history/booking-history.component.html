@@ -16,34 +16,18 @@
                       <th>Date</th>
                       <th>Address</th>
                       <th>Price</th>
-                      <th>Status</th>
+                      <th>Type</th>
+                      <th>Completed</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td>10-03-2018</td>
-                    <td>21 Sesame street, lagos</td>
-                    <td>&#8358;15,000</td>
-                    <td>Ongoing</td>
-                  </tr>
-                  <tr>
-                    <td>10-03-2018</td>
-                    <td>21 Sesame street, lagos</td>
-                    <td>&#8358;15,000</td>
-                    <td>Completed</td>
-                  </tr>
-                  <tr>
-                    <td>10-03-2018</td>
-                    <td>21 Sesame street, lagos</td>
-                    <td>&#8358;15,000</td>
-                    <td>Completed</td>
-                  </tr>
-                  <tr>
-                    <td>10-03-2018</td>
-                    <td>21 Sesame street, lagos</td>
-                    <td>&#8358;15,000</td>
-                    <td>Ongoing</td>
+                  <tr *ngFor="let b of bookings">
+                    <td>{{b.details.date}}</td>
+                    <td>{{b.address.address}}</td>
+                    <td>{{b.amount}}</td>
+                    <td>{{b.type}}</td>
+                    <td>{{b.is_complete}}</td>
                   </tr>
                 </tbody>
             </table></div>

@@ -4,8 +4,15 @@
 }
 
 * {
-	font-family: 'Raleway', sans-serif !important;
-  font-weight: 300  !important;
+	font-family: -apple-system, 
+               BlinkMacSystemFont, 
+               "Segoe UI", 
+               Roboto, 
+               Oxygen,
+               Ubuntu,
+               Cantarell,
+               "Raleway", 
+               sans-serif !important;
 }
 
 body, html {
@@ -15,6 +22,10 @@ body, html {
 .responsive-img {
   width: 100%;
   height: auto;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300  !important;
 }
 
 .primary-text {

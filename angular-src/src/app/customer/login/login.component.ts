@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Location} from '@angular/common';
 import { AuthService } from '../../services/auth.service';
 import { ValidatorService } from '../../services/validator.service';
 declare var Materialize: any;
@@ -51,7 +50,7 @@ export class LoginComponent implements OnInit {
 		}
 
 		this._auth.loginCustomerEmail(customer).subscribe(
-	        data => {
+	        (data: any) => {
 	          if(data.success == false){
 	            Materialize.toast(data.message, 3000, 'red white-text');
 	          }else if (data.success == true){
@@ -85,7 +84,7 @@ export class LoginComponent implements OnInit {
 		}
 
 		this._auth.loginCustomerPhone(customer).subscribe(
-	        data => {
+	        (data: any) => {
 	          if(data.success == false){
 	            Materialize.toast(data.message, 3000, 'red white-text');
 	          }else if (data.success == true){

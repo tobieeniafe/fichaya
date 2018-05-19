@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { AuthService } from '../../services/auth.service';
 declare var Materialize: any;
 declare var jQuery: any;

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tokenNotExpired } from 'angular2-jwt';
 import { Api } from '../api'
 
@@ -8,28 +7,24 @@ import { Api } from '../api'
 export class AuthService {
 
 	api = new Api().endpoint;
+	httpOptions = {
+	  headers: new HttpHeaders({
+	    'Content-Type':  'application/json'
+	  })
+	};
 
-	constructor(private _http: Http) {}
+	constructor(private http: HttpClient) {}
 
 	registerCustomer(customer){
-	    let header = new Headers();
-	    header.append('Content-Type','application/json');
-	    return this._http.post(this.api+'/customer/register', customer, {headers: header})
-	                .map(res => res.json());
-	 }
+	    return this.http.post(this.api+'/customer/register', customer, this.httpOptions)
+	}
 
 	loginCustomerEmail(customer){
-		let header = new Headers();
-		header.append('Content-Type','application/json');
-		return this._http.post(this.api+'/customer/login', customer, {headers: header})
-		            .map(res => res.json());
+		return this.http.post(this.api+'/customer/login', customer, this.httpOptions)
 	}
 
 	loginCustomerPhone(customer){
-		let header = new Headers();
-		header.append('Content-Type','application/json');
-		return this._http.post(this.api+'/customer/login_phone', customer, {headers: header})
-		            .map(res => res.json());
+		return this.http.post(this.api+'/customer/login_phone', customer, this.httpOptions)
 	}
 
 	loggedIn(){

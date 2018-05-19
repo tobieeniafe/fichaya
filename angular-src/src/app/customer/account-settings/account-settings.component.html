@@ -10,21 +10,21 @@
             <br><br>
 
             <div class="row table-body">
-            <form  (submit)="updateDetails()" *ngIf="loaded">
+            <form (submit)="updateDetails()">
                 <h5>Personal Information</h5>
                 
                 <div class="input-field col m3 s12">
                   <input type="text" placeholder="Firstname" name="firstname" [(ngModel)]="user.name.firstname">
                 </div>
                 <div class="input-field col m3 s12">
-                  <input type="text" placeholder="Lastname" name="lastname" [(ngModel)]="user.name.lastname">
+                  <input type="text" placeholder="Lastname" name="lastname"  [(ngModel)]="user.name.lastname">
                 </div>
                 <div class="input-field col m3 s12">
                   <input type="text" placeholder="Phone Number" name="phone" [(ngModel)]="user.phone">
                 </div>
                 <div class="input-field col m3 s12">
-                    <select name="subscription" [(ngModel)]="user.plan.subscription">
-                        <option *ngFor="let s of subscriptions" [value]="s">{{s}}</option>
+                    <select name="subscription" #subscription>
+                        <option *ngFor="let s of user.subscriptions" [value]="s">{{s}}</option>
                     </select>
                 </div>
                 <div class="input-field col m6 s12">
@@ -34,22 +34,19 @@
                     <input type="text" placeholder="Nearest Bus-Stop" name="busstop" [(ngModel)]="user.address.busstop">
                 </div>
                 <div class="input-field col m3 s12">
-                    <input type="text" placeholder="Location (Lekki, Ikoyi, Yaba)" name="location" [(ngModel)]="user.address.location">
+                    <input type="text" placeholder="Ares (Lekki, Ikoyi, Yaba)" name="area" [(ngModel)]="user.address.area">
                 </div>
                 <div class="input-field col m5 s12">
-                  <input type="text" class="validate" placeholder="Email" name="email" [(ngModel)]="user.email" disabled="">
+                  <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email">
                 </div>
                 <div class="input-field col m3 s12">
-                    <select name="location" [(ngModel)]="user.address.location">
-                        <!-- <option selected value="{{user.address.location}}">{{user.address.location}}</option> -->
-                        <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+                    <select name="location" location>
+                        <option *ngFor="let l of user.locations">{{l}}</option>
                     </select>
                 </div>
                 <div class="input-field col m3 s12">
-                    <select name="type" [(ngModel)]="user.plan.type">
-                        <option>here</option>
-                        <!-- <option selected value="{{user.address.location}}">{{user.address.location}}</option> -->
-                        <option *ngFor="let t of types" [value]="t">{{t}}</option>
+                    <select name="type" #type>
+                        <option *ngFor="let t of user.types">{{t}}</option>
                     </select>
                 </div>
                 <div class="col s12 center" style="padding-top: 10px">
