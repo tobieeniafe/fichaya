@@ -164,13 +164,17 @@ paymentOptions: RaveOptions = {
 
 		if (this.token == null) { 
 			let guest = {
+				firstname: "User",
+				lastname: (Math.ceil(Math.random()*1250)).toString(),
 				email: this.email,
 				phone: this.phone,
 				password: this.phone,
 				address: this.address,
 				busstop: this.busstop,
 				area: this.area,
-				location: location.toLowerCase()
+				location: location.toLowerCase(),
+				plan: this.booking.type,
+				subscription: this.subscription
 			}
 			this.getStartedService.registerGuest(guest).subscribe(
 		       (data: any) => {

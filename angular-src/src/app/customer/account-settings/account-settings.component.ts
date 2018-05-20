@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AccountSettingsService } from './account-settings.service';
 declare var Materialize: any;
 declare var $: any;
@@ -17,7 +19,7 @@ export class AccountSettingsComponent implements OnInit {
 	subscriptions: any;
 	types: any;
 
-	constructor(private accountSettingService: AccountSettingsService) {
+	constructor(private router: Router, private accountSettingService: AccountSettingsService) {
 		this.getUser()
 		$(document).ready(function(){
 			$('.side-nav-open').sideNav({
@@ -37,13 +39,17 @@ export class AccountSettingsComponent implements OnInit {
 	getUser(){
 	    this.accountSettingService.getUserDetails().subscribe(
 	       (data: any) => {
-	        if (data.success == true) { 
-	           this.user = data.customer;
+	        if (data.success == true) {
+	           let model = data.customer;
+	           this.user = model
+	           this.user.locations = [model.address.location,'island' , 'mainland']
+	           this.user.subscriptions = [model.plan.subscription, 'daily', 'weekly', 'monthly']
+	           this.user.types = [model.plan.plan, 'deep cleaning', 'regular cleaning']
+	           
+	           console.log(this.user.locations)
+	           console.log(this.user.subscriptions)
+	           console.log(this.user.types)
 	           console.log(this.user)
-	           this.user.locations = [this.user.address.location,'island' , 'mainland']
-	           this.user.subscriptions = [this.user.plan.subscription, 'daily', 'weekly', 'monthly']
-	           this.user.types = [this.user.plan.type, 'regular cleaning', 'deep cleaning']
-	           console.log(`${ this.user.locations}\n ${this.user.subscriptions}\n ${this.user.types}`)
 	        } else {
 	         	Materialize.toast("Something's not right 1", 1500, 'red white-text')
 	        }
@@ -54,19 +60,26 @@ export class AccountSettingsComponent implements OnInit {
 	}
 
 
-	updateDetails(){
-		// console.log(this.user)
+	updateDetails(s,l,t){
+		
 		let query = {
 			lastname: this.user.name.lastname, 
 			firstname: this.user.name.firstname,
+			email: this.user.email,
 			address: this.user.address.address, 
 			busstop: this.user.address.busstop, 
 			area: this.user.address.area, 
-			location: this.user.address.location,
+			location: l,
 			phone: this.user.phone,
-			type: this.user.plan.type, 
-			subscription: this.user.plan.subscription
+			plan: t, 
+			subscription: s
 		};
+		
+		console.log(query)
+		console.log(s)
+		console.log(l)
+		console.log(t)
+		//unable to get values from select
 		this.accountSettingService.updateDetails(query).subscribe(
 	       (data: any) => {
 	        if (data.success == true) { 
@@ -103,6 +116,5 @@ export class User {
     };
     locations: string[] = ['island' , 'mainland']
     subscriptions: string[] = ['daily', 'weekly', 'monthly'];
-    types: string[] = ['regular cleaning', 'deep cleaning'];
-
+    types: string[] = [ 'deep cleaning', 'regular cleaning'];
 }

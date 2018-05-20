@@ -10,7 +10,7 @@
             <br><br>
 
             <div class="row table-body">
-            <form (submit)="updateDetails()">
+            <form (submit)="updateDetails(subscription.value, location.value, type.value)" novalidate="">
                 <h5>Personal Information</h5>
                 
                 <div class="input-field col m3 s12">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="input-field col m3 s12">
                     <select name="subscription" #subscription>
-                        <option *ngFor="let s of user.subscriptions" [value]="s">{{s}}</option>
+                        <option *ngFor="let s of user.subscriptions" [ngValue]="s">{{s}}</option>
                     </select>
                 </div>
                 <div class="input-field col m6 s12">
@@ -40,13 +40,13 @@
                   <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email">
                 </div>
                 <div class="input-field col m3 s12">
-                    <select name="location" location>
-                        <option *ngFor="let l of user.locations">{{l}}</option>
+                    <select name="location" #location>
+                        <option *ngFor="let l of user.locations" [ngValue]="l">{{l}}</option>
                     </select>
                 </div>
                 <div class="input-field col m3 s12">
                     <select name="type" #type>
-                        <option *ngFor="let t of user.types">{{t}}</option>
+                        <option *ngFor="let t of user.types" [ngValue]="t">{{t}}</option>
                     </select>
                 </div>
                 <div class="col s12 center" style="padding-top: 10px">
