@@ -35,8 +35,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Api", function() { return Api; });
 var Api = /** @class */ (function () {
     function Api() {
-        //readonly endpoint: string = 'https://fichaya-api.herokuapp.com/api/v1'
-        this.endpoint = 'http://localhost:3000/api/v1';
+        this.endpoint = 'https://fichaya-api.herokuapp.com/api/v1';
+        //readonly endpoint: string = 'http://localhost:3000/api/v1'
     }
     return Api;
 }());
