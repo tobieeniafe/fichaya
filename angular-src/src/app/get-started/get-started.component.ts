@@ -43,7 +43,6 @@ paymentOptions: RaveOptions = {
 
 		this.token = localStorage.getItem('token');
 		$(document).ready(function(){
-			$('.modal').modal()
 			$('select').material_select();
 			$('.paymentButton').hide()
 
@@ -87,39 +86,59 @@ paymentOptions: RaveOptions = {
 
 	ngOnInit() {}
 
-	typeIsDay(v){
-		this.subscription = 'daily';
+	typeIsOneTime(v){
+		this.subscription = 'one time';
 		this.apartment_type = v;
-		if (this.apartment_type == '3') { 
-			this.amount = 15000
-		}else if (this.apartment_type == '4') { 
-			this.amount = 20000
-		} else {
-			this.amount = 25000
+		if (this.apartment_type == '1') { 
+			this.amount = 5500
+		}else if (this.apartment_type == '2') { 
+			this.amount = 6500
+		}else if (this.apartment_type == '3') {
+			this.amount = 7500
+		}else {
+			this.amount = 9000
 		}
 	}
 
-	typeIsWeek(v){
+	typeIsBiWeekly(v){
+		this.subscription = 'bi weekly';
+		this.apartment_type = v;
+		if (this.apartment_type == '1') { 
+			this.amount = 7800
+		}else if (this.apartment_type == '2') { 
+			this.amount = 8800
+		}else if (this.apartment_type == '3') {
+			this.amount = 9800
+		}else {
+			this.amount = 10800
+		}
+	}
+
+	typeIsWeekly(v){
 		this.subscription = 'weekly';
-		this.apartment_type = v
-		if (this.apartment_type == '3') { 
-			this.amount = 15000
-		}else if (this.apartment_type == '4') { 
-			this.amount = 20000
-		} else {
-			this.amount = 25000
+		this.apartment_type = v;
+		if (this.apartment_type == '1') { 
+			this.amount = 13100
+		}else if (this.apartment_type == '2') { 
+			this.amount = 14500
+		}else if (this.apartment_type == '3') {
+			this.amount = 15850
+		}else {
+			this.amount = 18000
 		}
 	}
 
-	typeIsMonth(v){
-		this.subscription = 'monthly';
-		this.apartment_type = v
-		if (this.apartment_type == '3') { 
-			this.amount = 15000
-		}else if (this.apartment_type == '4') { 
-			this.amount = 20000
-		} else {
-			this.amount = 25000
+	typeIsTwiceAWeek(v){
+		this.subscription = 'twice a week';
+		this.apartment_type = v;
+		if (this.apartment_type == '1') { 
+			this.amount = 24700
+		}else if (this.apartment_type == '2') { 
+			this.amount = 26500
+		}else if (this.apartment_type == '3') {
+			this.amount = 29000
+		}else {
+			this.amount = 34000
 		}
 	}
 
@@ -147,7 +166,7 @@ paymentOptions: RaveOptions = {
 		this.paymentOptions = {
 		  PBFPubKey: 'FLWPUBK-99c483b9b4ff351fa656f1d7c7e8f36a-X',
 		  customer_email: this.email,
-		  custom_description: 'Fichaya Cleaning for '+ this.apartment_type+' bedroom',
+		  custom_description: 'Fichaya Cleaning for '+ this.apartment_type+' bedroom(s)',
 		  amount: this.amount,
 		  customer_phone: this.phone,
 		  txref: this.referenceNo
@@ -206,6 +225,7 @@ paymentOptions: RaveOptions = {
 						(data: any) => {
 							if (data.success == true) {
 								console.log(this.cleaner)
+								data.cleaner.avatar = 'assets/images/avatar5.png'
 								this.cleaner = data.cleaner
 								console.log(this.cleaner)
 							} else {
@@ -214,7 +234,7 @@ paymentOptions: RaveOptions = {
 						},
 						err => Materialize.toast("Something's not right", 1500, 'red white-text'),
 						() => $(document).ready(function() {
-									// $('.modal').modal()
+									$('.modal').modal()
 					       			$('#customer_details').modal('open')
 					       		})
 					);
@@ -254,9 +274,9 @@ paymentOptions: RaveOptions = {
 
 export class Cleaner {
     name: any = {
-    	firstname: 'baba',
-    	lastname: 'sala'
+    	firstname: '',
+    	lastname: ''
     };
-    phone: string = '08096635448'
-    avatar: string = 'assets/images/avatar5.png'
+    phone: string;
+    avatar: string;
 }

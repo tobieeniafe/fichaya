@@ -7,19 +7,39 @@
 
 	    <div class="col m6 s12 form-body" align="center">
 	    		<h4 class="primary-text">Customer Login</h4>
-		    	<form class="row" (submit)="submitForm()">
-		    		<div class="input-field col m12 s12">
-					    <input class="" type="text" placeholder="email or phone number" name="loginvalue" [(ngModel)]="loginvalue" required="">
-					</div>
-					<div class="input-field col m12 s12">
-					    <input class="" type="password" placeholder="password" name="password" [(ngModel)]="password" required="">
-					</div>
-					<div class="input-field col m12 s12">
-		    			<button class="btn btn-primary" type="submit">Login</button>
+		    	<form (submit)="submitForm()" novalidate="">
+		    		<div class="row">
+		    			<div class="input-field col m12 s12">
+					    	<input type="text" placeholder="email or phone number" name="loginvalue" [(ngModel)]="loginvalue">
+						</div>
+						<div class="input-field col m12 s12">
+						    <input type="password" placeholder="password" name="password" [(ngModel)]="password">
+						</div>
+						<div class="input-field col m12 s12" *ngIf="!preloader">
+			    			<button class="btn btn-primary" type="submit">Login <i class="ion-log-in"></i></button>
+			    		</div>
 		    		</div>
 		    	</form>
-	    	<!-- <br> -->
-	    	<h6>Not yet registered? <a routerLink="/customer/register">Register now</a></h6>
+
+		    <div align='center' *ngIf="preloader">
+			    <div class="preloader-wrapper small active">
+			      <div class="spinner-layer">
+			        <div class="circle-clipper left">
+			          <div class="circle"></div>
+			        </div>
+			        <div class="gap-patch">
+			          <div class="circle"></div>
+			        </div>
+			        <div class="circle-clipper right">
+			          <div class="circle"></div>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+
+	    	<h6>Not yet registered? <a routerLink="/get-started">Get Started</a></h6>
+	    	
+	    	
 
 	    </div>
   </div>

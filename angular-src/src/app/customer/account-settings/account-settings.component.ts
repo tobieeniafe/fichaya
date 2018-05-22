@@ -41,9 +41,9 @@ export class AccountSettingsComponent implements OnInit {
 	       (data: any) => {
 	        if (data.success == true) {
 	           let model = data.customer;
-	           model.locations = [model.address.location,'island' , 'mainland']
-	           model.subscriptions = [model.plan.subscription, 'daily', 'weekly', 'monthly']
-	           model.types = [model.plan.plan, 'regular cleaning','deep cleaning', 'fumigation']
+	           model.locations = [model.address.location, 'island' , 'mainland']
+	           model.subscriptions = [model.plan.subscription, 'one time', 'bi weekly', 'weekly', 'twice a week']
+	           model.types = [model.plan.plan, 'regular cleaning', 'deep cleaning', 'fumigation']
 	           this.user = model
 	           //console.log(this.user)
 	        } else {
@@ -79,7 +79,7 @@ export class AccountSettingsComponent implements OnInit {
 	       (data: any) => {
 	        if (data.success == true) { 
 	           Materialize.toast(data.message, 1500, 'green white-text')
-	           this.getUser()
+	           // this.getUser()
 	        } else {
 	         	Materialize.toast("Something's not right", 1500, 'red white-text')
 	        }

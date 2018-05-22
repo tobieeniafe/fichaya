@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './customer/login/login.component';
-import { RegisterComponent } from './customer/register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './customer/dashboard/dashboard.component';
 import { ValidatorService } from './services/validator.service';
@@ -34,7 +33,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: 'index',  component: LandingPageComponent },
   { path: 'customer/login',  component: LoginComponent, canActivate: [RouteGuardService] },
-  { path: 'customer/register',  component: RegisterComponent, canActivate: [RouteGuardService] },
   { path: 'customer/dashboard',  component: DashboardComponent, canActivate: [AuthGuardService] },
   { path: 'customer/booking',  component: BookingHistoryComponent, canActivate: [AuthGuardService] },
   { path: 'customer/account',  component: AccountSettingsComponent, canActivate: [AuthGuardService] },
@@ -47,7 +45,6 @@ const routes: Routes = [
     NavbarComponent,
     LandingPageComponent,
     LoginComponent,
-    RegisterComponent,
     FooterComponent,
     DashboardComponent,
     SidebarComponent,
