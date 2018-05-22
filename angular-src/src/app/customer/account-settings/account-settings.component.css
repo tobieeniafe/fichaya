@@ -7,7 +7,7 @@
     left: 0;
     right: 0;
     /*bottom: 0;*/
-    padding: 2rem 5rem 5rem 5rem;
+    /*padding: 2rem 5rem 5rem 5rem;*/
 }
 
 .hamburger:hover{
@@ -29,8 +29,8 @@
     border-radius: 15px;
 }
 
-@media only screen and (max-width: 450px) {
-    .table-body{
+@media (max-width: 450px) {
+  .table-body{
         padding: 1rem;
     }
 }

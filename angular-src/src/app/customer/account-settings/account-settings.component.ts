@@ -41,21 +41,19 @@ export class AccountSettingsComponent implements OnInit {
 	       (data: any) => {
 	        if (data.success == true) {
 	           let model = data.customer;
+	           model.locations = [model.address.location,'island' , 'mainland']
+	           model.subscriptions = [model.plan.subscription, 'daily', 'weekly', 'monthly']
+	           model.types = [model.plan.plan, 'regular cleaning','deep cleaning', 'fumigation']
 	           this.user = model
-	           this.user.locations = [model.address.location,'island' , 'mainland']
-	           this.user.subscriptions = [model.plan.subscription, 'daily', 'weekly', 'monthly']
-	           this.user.types = [model.plan.plan, 'deep cleaning', 'regular cleaning']
-	           
-	           console.log(this.user.locations)
-	           console.log(this.user.subscriptions)
-	           console.log(this.user.types)
-	           console.log(this.user)
+	           //console.log(this.user)
 	        } else {
 	         	Materialize.toast("Something's not right 1", 1500, 'red white-text')
 	        }
 	       },
 	       err => Materialize.toast("Something's not right 2", 1500, 'red white-text'),
-	       () => $('select').material_select()
+	       () => $(document).ready(function() {
+	       			$('select').material_select()
+	       		})
 	    );
 	}
 
@@ -75,16 +73,13 @@ export class AccountSettingsComponent implements OnInit {
 			subscription: s
 		};
 		
-		console.log(query)
-		console.log(s)
-		console.log(l)
-		console.log(t)
-		//unable to get values from select
+		//console.log(query)
+		
 		this.accountSettingService.updateDetails(query).subscribe(
 	       (data: any) => {
 	        if (data.success == true) { 
 	           Materialize.toast(data.message, 1500, 'green white-text')
-	           console.log(query)
+	           this.getUser()
 	        } else {
 	         	Materialize.toast("Something's not right", 1500, 'red white-text')
 	        }
@@ -114,7 +109,7 @@ export class User {
     	type: '',
     	subscription: ''
     };
-    locations: string[] = ['island' , 'mainland']
-    subscriptions: string[] = ['daily', 'weekly', 'monthly'];
-    types: string[] = [ 'deep cleaning', 'regular cleaning'];
+    locations: string[] = []
+    subscriptions: string[] = [];
+    types: string[] = [];
 }

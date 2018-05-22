@@ -23,3 +23,10 @@
 	padding: 1.5rem;
 	color: #000080;
 }
+
+
+@media (max-width: 450px) {
+  .plans{
+  	padding-left: 0;
+  }
+}

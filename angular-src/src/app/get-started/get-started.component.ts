@@ -28,11 +28,8 @@ email: string;
 time: string = 'time';
 referenceNo: string;
 booking: any;
-modal: string;
-cleaner_name: string = "Test Name"
-cleaner_phone: string = "08012345678"
-cleaner_avatar: string = 'assets/images/avatar5.png';
-cleaning_time: string = "12:35"
+cleaner = new Cleaner();
+cleaning_time: string;
 paymentOptions: RaveOptions = {
 								  PBFPubKey: 'FLWPUBK-99c483b9b4ff351fa656f1d7c7e8f36a-X',
 								  customer_email: this.email,
@@ -46,8 +43,8 @@ paymentOptions: RaveOptions = {
 
 		this.token = localStorage.getItem('token');
 		$(document).ready(function(){
+			$('.modal').modal()
 			$('select').material_select();
-			$('.modal').modal();
 			$('.paymentButton').hide()
 
 			$('.datepicker').pickadate({
@@ -128,7 +125,6 @@ paymentOptions: RaveOptions = {
 
 	verifyDetails(date, time, location, type){
 		this.generateReference()
-		this.modal = 'modal changed'
 
 		this.booking = {
 			email: this.email,
@@ -200,7 +196,6 @@ paymentOptions: RaveOptions = {
 
 	makeBooking(gig){
 		gig.is_paid_for = true;
-
 		//console.log(gig)
 		this.getStartedService.createGig(gig).subscribe(
 		   (data: any) => {
@@ -210,20 +205,25 @@ paymentOptions: RaveOptions = {
 					this.getStartedService.getCleanerDetails({cleaner_id: data.cleaner_id}).subscribe(
 						(data: any) => {
 							if (data.success == true) {
-								$('#customer_details').modal('open');
+								console.log(this.cleaner)
+								this.cleaner = data.cleaner
+								console.log(this.cleaner)
 							} else {
-								Materialize.toast("error gettin cleaner", 1500, 'red white-text')
+								Materialize.toast("error getting cleaner", 1500, 'red white-text')
 							}
 						},
 						err => Materialize.toast("Something's not right", 1500, 'red white-text'),
-						() => console.log()
+						() => $(document).ready(function() {
+									// $('.modal').modal()
+					       			$('#customer_details').modal('open')
+					       		})
 					);
 		        } else {
 		         	Materialize.toast("5", 1500, 'red white-text')
 		        }
 		   },
 		   err => Materialize.toast("Unable to book cleaner, kindly contact our admin", 3000, 'red white-text'),
-		   () => console.log(this.modal)
+		   () => console.log()
 		);
 	}
 
@@ -247,4 +247,16 @@ paymentOptions: RaveOptions = {
 
 
 
+}
+
+
+
+
+export class Cleaner {
+    name: any = {
+    	firstname: 'baba',
+    	lastname: 'sala'
+    };
+    phone: string = '08096635448'
+    avatar: string = 'assets/images/avatar5.png'
 }

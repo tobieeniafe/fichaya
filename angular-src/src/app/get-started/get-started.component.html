@@ -154,6 +154,7 @@
 					(callback)="paymentDone($event)"
 				>Book Cleaner <i class="ion-card"></i></button>
             </div>
+            {{cleaner.phone}}
 
 <!-- Modal Trigger -->
 <button data-target="customer_details" class="btn modal-trigger">Modal</button>
@@ -163,18 +164,18 @@
 	<div class="modal-content">
 		<h4 class="center">Cleaner's Details</h4>
 		<div class="row">
-			<div class="col s12 m5">
-				<img src="{{cleaner_avatar}}" class="circle" style="height: 150px; width: 150px">
+			<div class="col s12 m5 center">
+				<img src="{{cleaner.avatar}}" class="circle" style="height: 150px; width: 150px">
 			</div>
 			<div class="col s12 m7">
-				<h4>{{cleaner_name}}</h4>
-				<h5><i class="ion-ios-telephone-outline"></i> &nbsp; {{cleaner_phone}}</h5>
+				<h4>{{cleaner.name.firstname}} {{cleaner.name.lastname}}</h4>
+				<h5><i class="ion-ios-telephone-outline"></i> &nbsp; {{cleaner.phone}}</h5>
 				<h5><i class="ion-ios-clock-outline"></i> &nbsp; {{cleaning_time}}</h5>
 			</div>
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button class="btn modal-action modal-close">Finish</button>
+		<a class="btn modal-action modal-close" routerLink="/customer/booking">Finish</a>
 	</div>
 </div>
 
