@@ -10,11 +10,11 @@ export class GetStartedService {
 	
 	constructor(private http: HttpClient) {
 	    this.http = http;
-	    this.token = localStorage.getItem('token');
+	    this.token = localStorage.getItem('access_token');
 	}
 
 	createGig(gig) {
-		this.token = localStorage.getItem('token');
+		this.token = localStorage.getItem('access_token');
 	    let httpOptions = {
 		  headers: new HttpHeaders({
 		    'Content-Type':  'application/json',
@@ -25,7 +25,7 @@ export class GetStartedService {
 	}
 
 	getCleanerDetails(cleaner_id) {
-		this.token = localStorage.getItem('token');
+		this.token = localStorage.getItem('access_token');
 	    let httpOptions = {
 		  headers: new HttpHeaders({
 		    'Content-Type':  'application/json',

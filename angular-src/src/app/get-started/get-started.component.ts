@@ -41,7 +41,7 @@ paymentOptions: RaveOptions = {
 
 	constructor(private router: Router, private getStartedService: GetStartedService) {
 
-		this.token = localStorage.getItem('token');
+		this.token = localStorage.getItem('access_token');
 		$(document).ready(function(){
 			$('select').material_select();
 			$('.paymentButton').hide()
@@ -194,8 +194,8 @@ paymentOptions: RaveOptions = {
 			this.getStartedService.registerGuest(guest).subscribe(
 		       (data: any) => {
 			        if (data.success == true) { 
-			           localStorage.setItem('token', data.token);
-			           this.token = localStorage.getItem('token');
+			           localStorage.setItem('access_token', data.token);
+			           this.token = localStorage.getItem('access_token');
 			           Materialize.toast("success 1", 1500, 'green white-text')
 			           $('.paymentButton').show()
 			        } else {
