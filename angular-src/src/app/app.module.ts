@@ -35,7 +35,8 @@ const routes: Routes = [
   { path: 'customer/dashboard',  component: DashboardComponent, canActivate: [AuthGuardService] },
   { path: 'customer/booking',  component: BookingHistoryComponent, canActivate: [AuthGuardService] },
   { path: 'customer/account',  component: AccountSettingsComponent, canActivate: [AuthGuardService] },
-  { path: 'get-started',  component: GetStartedComponent }
+  { path: 'get-started',  component: GetStartedComponent },
+  { path: '**', component: LoginComponent  }
 ];
 
 export function tokenGetter() {

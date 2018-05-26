@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <div class="container row">
 	<br>
 	<h4 class="center" style="color: #000080">Book Your Cleaning Service</h4>
@@ -131,11 +133,11 @@
                 <input type="text" placeholder="Nearest Bus-Stop" name="busstop" [(ngModel)]="busstop">
             </div>
             <div class="input-field col m3 s12">
-                <input type="text" placeholder="Location (Lekki, Ikoyi, Yaba)" name="area" [(ngModel)]="area">
+                <input type="text" placeholder="Area (Lekki, Ikoyi, Yaba)" name="area" [(ngModel)]="area">
             </div>
             <div class="input-field col m3 s12">
 		        <select name="location" #location>
-		        	<option disabled selected>Location</option>
+		        	<!-- <option disabled selected>Location</option> -->
 		            <option [ngValue]="island">Island</option>
 		            <option [ngValue]="mainland">Mainland</option>
 		        </select>
