@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import * as $ from 'jquery';
-// import * as JQuery from 'jquery';
-// declare var Materialize: any;
+declare var $: any;
+declare var Materialize: any;
 
 @Component({
   selector: 'landing-page',
@@ -10,14 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() {}
+	constructor() {
+		$(document).ready(function(){
+			$('.carousel.carousel-slider').carousel({
+				fullWidth: true,
+				indicators: true,
+				duration: 200
+			});
+		});
+	}
 
-  ngOnInit() {}
+	ngOnInit() {}
 
   iphone: string = 'assets/images/iphone.png';
-  android: string = 'assets/images/android.png';
-  why1: string = 'assets/images/why1.png';
-  why2: string = 'assets/images/why2.png';
-  why3: string = 'assets/images/why3.png';
 
 }
