@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
-import * as jQuery from 'jquery';
+declare var $: any;
+declare var Materialize: any;
+declare var jQuery: any;
 
 @Component({
   selector: 'app-navbar',
@@ -14,6 +15,8 @@ export class NavbarComponent implements OnInit {
 
 		(function($){
 			$(function(){
+
+				$('.modal').modal();
 
 				// Sticky Header
 				$(window).scroll(function() {
@@ -55,7 +58,4 @@ export class NavbarComponent implements OnInit {
 		})(jQuery);
 
 	}
-
-
 }
-

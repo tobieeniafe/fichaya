@@ -12,13 +12,23 @@
             <ul>
                 <li><a routerLink='/index' routerLinkActive='active'>Home</a></li>
                 <li><a routerLink='' routerLinkActive='active'>About</a></li>
-                <li><a routerLink='/customer/login' routerLinkActive='active' class="button button-primary">Login</a></li>
+                <li><a class="modal-trigger"  href="#loginModal">Login</a></li>
             </ul>
-            <!-- <ul>
-                <li class="white-text">Customer</li>
-                <li class="white-text">Cleaner</li>
-            </ul> -->
         </nav>
         
     </div> 
 </header>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content center container row">
+        <div class="col s12 m12">
+            <a class="btn-large" routerLink='/customer/login' style="opacity: 0.8">LOGIN AS A CUSTOMER</a>
+        </div>
+        <div class="col s12 m12">
+            <br><hr><br>
+        </div>
+        <div class="col s12 m12">
+            <a class="btn-large" href="https://fichaya-cleaner.herokuapp.com" style="opacity: 0.8">LOGIN AS AN ASSOCIATE</a>
+        </div>
+    </div>
+</div>

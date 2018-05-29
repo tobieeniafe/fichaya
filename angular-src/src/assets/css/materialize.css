@@ -5899,8 +5899,8 @@ input[type=range]:focus::-ms-fill-upper {
         font-size: 15px; }
   .carousel .carousel-item {
     display: none;
-    width: 200px;
-    height: 200px;
+    width: 600px;
+    min-height: 200px;
     position: absolute;
     top: 0;
     left: 0; }

@@ -97,7 +97,7 @@ nav ul li {
 nav ul a {
   color: #fff;
   text-transform: uppercase; 
-  padding: 0.3rem 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 nav ul a:hover {
@@ -170,4 +170,14 @@ a {
     -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
+}
+
+.modal-content{
+  padding: 3rem 0;
+  background-color: transparent;
+}
+
+.modal{
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 5px;
 }
