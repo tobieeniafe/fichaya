@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 declare var $: any;
 declare var Materialize: any;
 
@@ -10,17 +11,16 @@ declare var Materialize: any;
 export class LandingPageComponent implements OnInit {
 
 	constructor() {
-		$(document).ready(function(){
-			$('.carousel.carousel-slider').carousel({
-				fullWidth: true,
-				indicators: true,
-				duration: 200
-			});
+		Observable.interval(3000).subscribe(() => {
+	    	$('.carousel').carousel('next');
+	    	$('.testimonial-slider').carousel('next');
 		});
 	}
 
-	ngOnInit() {}
-
-  iphone: string = 'assets/images/iphone.png';
+	ngOnInit() {
+		$(document).ready(function(){
+			$('.carousel.carousel-slider').carousel({fullWidth: true});
+		});
+	}
 
 }
