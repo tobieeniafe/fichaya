@@ -23,7 +23,7 @@
 
 .plan-title {
   margin-bottom: 1rem;
-  color: #000080;
+  color: #00003D;
 }
 
 .plan-description {
@@ -86,22 +86,22 @@
 }
 
 .light-text {
-  color: #5757AF;
+  color: #00006c;
 }
 
 .adv{
   background-color: transparent;
-  color: #000080;
+  color: #00003D;
 }
 
 .why{
-  box-shadow: 0px 1px 15px 0px rgba(0, 0, 128, 0.2);
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 61, 0.2);
   border-radius: 5px;
   padding: 3rem;
 }
 
 .process{
-  box-shadow: 0px 1px 15px 0px rgba(0, 0, 128, 0.2);
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 61, 0.2);
   border-radius: 5px;
   padding: 0 2rem 0 2rem;
 }
@@ -122,14 +122,14 @@
 }
 
 .advantage{
-  background: linear-gradient(0deg,rgba(0, 0, 128, 0.1),rgba(0, 0, 128, 0.1)),url('/assets/images/circle-background.png');
+  background: linear-gradient(0deg,rgba(0, 0, 61, 0.19),rgba(0, 0, 61, 0.19)),url('/assets/images/circle-background.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .clean-better{
-  background: linear-gradient(0deg,rgba(0, 0, 0, 0.19),rgba(0, 0, 128, 0.19)),url('/assets/images/circle-background-2.png');
+  background: linear-gradient(0deg,rgba(0, 0, 0, 0.19),rgba(0, 0, 61, 0.19)),url('/assets/images/circle-background-2.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -144,7 +144,7 @@
 .testimonial-item{
   padding: 3.5rem 3.5rem 2rem 3.5rem !important;
   min-height: 200px !important;
-  box-shadow: 10px 28px 41px rgba(0, 0, 128, 0.09);
+  box-shadow: 10px 28px 41px rgba(0, 0, 61, 0.19);
   border-radius: 5px;
 }
 

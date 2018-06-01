@@ -11,7 +11,7 @@ declare var Materialize: any;
 export class LandingPageComponent implements OnInit {
 
 	constructor() {
-		Observable.interval(3000).subscribe(() => {
+		Observable.interval(4500).subscribe(() => {
 	    	$('.carousel').carousel('next');
 	    	$('.testimonial-slider').carousel('next');
 		});

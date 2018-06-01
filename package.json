@@ -8,9 +8,9 @@
     "start": "node app",
     "start-angular": "cd angular-src && ng serve",
     "build": "cd angular-src && ng build",
-    "deploy": "git add . && git commit -m 'deploy' && git push github master && git push heroku master && git push origin master",
-    "push": "git push github master && git push heroku master && git push origin master",
-    "deploy-prod": "cd angular-src && ng build --env=prod && cd .. && git add . && git commit -m 'prod' && git push github master && git push heroku master"
+    "deploy": "git add . && git commit -m 'deploy' && git push heroku master && git push origin master && git push github master",
+    "push": "git push heroku master && git push origin master && git push github master",
+    "deploy-prod": "cd angular-src && ng build --env=prod && cd .. && git add . && git commit -m 'prod' && git push heroku master && git push github master"
   },
   "repository": {
     "type": "git",

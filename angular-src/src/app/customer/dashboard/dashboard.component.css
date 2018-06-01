@@ -14,7 +14,7 @@
 
 .hamburger:hover{
 	cursor: pointer;
-    color: #000080;
+    color: #00003D;
 }
 
 .ion-ios-close{
@@ -22,5 +22,5 @@
 }
 
 .side-nav-open, h3{
-    color: #000080;
+    color: #00003D;
 }

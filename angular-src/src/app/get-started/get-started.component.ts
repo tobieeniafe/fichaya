@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { GetStartedService } from './get-started.service';
 import { RaveOptions } from 'angular-rave';
+import { Api } from '../api';
 declare var Materialize: any;
 declare var $: any;
 
@@ -15,6 +16,7 @@ declare var $: any;
 
 export class GetStartedComponent implements OnInit {
 
+apikey = new Api().apikey
 subscription: string;
 address: string;
 busstop: string;
@@ -31,7 +33,7 @@ booking: any;
 cleaner = new Cleaner();
 cleaning_time: string;
 paymentOptions: RaveOptions = {
-								  PBFPubKey: 'FLWPUBK-99c483b9b4ff351fa656f1d7c7e8f36a-X',
+								  PBFPubKey: this.apikey,
 								  customer_email: this.email,
 								  custom_description: 'Fichaya Cleaning for '+ this.apartment_type+' bedroom',
 								  amount: this.amount,
@@ -164,7 +166,7 @@ paymentOptions: RaveOptions = {
 		this.cleaning_time = this.booking.time
 
 		this.paymentOptions = {
-		  PBFPubKey: 'FLWPUBK-99c483b9b4ff351fa656f1d7c7e8f36a-X',
+		  PBFPubKey: this.apikey,
 		  customer_email: this.email,
 		  custom_description: 'Fichaya Cleaning for '+ this.apartment_type+' bedroom(s)',
 		  amount: this.amount,
