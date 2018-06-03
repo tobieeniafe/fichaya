@@ -18,6 +18,7 @@ export class AccountSettingsComponent implements OnInit {
 	locations: any ;
 	subscriptions: any;
 	types: any;
+	preloader: boolean = false
 
 	constructor(private router: Router, private accountSettingService: AccountSettingsService) {
 		this.getUser()
@@ -59,6 +60,7 @@ export class AccountSettingsComponent implements OnInit {
 
 
 	updateDetails(s,l,t){
+		this.preloader = true
 		
 		let query = {
 			lastname: this.user.name.lastname, 
@@ -79,13 +81,15 @@ export class AccountSettingsComponent implements OnInit {
 	       (data: any) => {
 	        if (data.success == true) { 
 	           Materialize.toast(data.message, 1500, 'green white-text')
+	           this.preloader = false
 	           // this.getUser()
 	        } else {
-	         	Materialize.toast("Something's not right", 1500, 'red white-text')
+	         	Materialize.toast(data.message, 1500, 'red white-text')
+	         	this.preloader = false
 	        }
 	       },
-	       err => Materialize.toast("Something's not right", 1500, 'red white-text'),
-	       () => console.log()
+	       err => (Materialize.toast("Something's not right", 1500, 'red white-text'), this.preloader = false),
+	       () => this.preloader = false
 	    );
 	}
 
