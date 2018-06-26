@@ -32,6 +32,9 @@ referenceNo: string;
 booking: any;
 cleaner = new Cleaner();
 cleaning_time: string;
+otp: string;
+guest: any;
+disableCheckoutButton: boolean = false;
 paymentOptions: RaveOptions = {
 								  PBFPubKey: this.apikey,
 								  customer_email: this.email,
@@ -145,6 +148,7 @@ paymentOptions: RaveOptions = {
 	}
 
 	verifyDetails(date, time, location, type){
+		this.disableCheckoutButton = true;
 		this.generateReference()
 
 		this.booking = {
@@ -163,6 +167,20 @@ paymentOptions: RaveOptions = {
 			is_paid_for: false
 		}
 
+		this.guest = {
+			firstname: "User",
+			lastname: (Math.ceil(Math.random()*1250)).toString(),
+			email: this.email,
+			phone: this.phone,
+			password: this.phone,
+			address: this.address,
+			busstop: this.busstop,
+			area: this.area,
+			location: location.toLowerCase(),
+			plan: this.booking.type,
+			subscription: this.subscription
+		}
+
 		this.cleaning_time = this.booking.time
 
 		this.paymentOptions = {
@@ -176,44 +194,75 @@ paymentOptions: RaveOptions = {
 
 		if(!this.getStartedService.validateBookingDetails(this.booking, this.phone)){
 		  Materialize.toast('All fields are required', 2000, 'red white-text');
+		  this.disableCheckoutButton = false;
 		  return false;
 		}
 
-		if (this.token == null) { 
-			let guest = {
-				firstname: "User",
-				lastname: (Math.ceil(Math.random()*1250)).toString(),
-				email: this.email,
-				phone: this.phone,
-				password: this.phone,
-				address: this.address,
-				busstop: this.busstop,
-				area: this.area,
-				location: location.toLowerCase(),
-				plan: this.booking.type,
-				subscription: this.subscription
-			}
-			this.getStartedService.registerGuest(guest).subscribe(
+		if (this.phone.length !== 11) {
+			Materialize.toast('Please enter a valid phone number', 1500, 'red white-text');
+			this.disableCheckoutButton = false;
+			return false;
+		}
+
+		if (this.token == null) {
+			let internationalNumber = this.phone.replace('0', '234');
+			this.getStartedService.requestOTP({phone: internationalNumber}).subscribe(
 		       (data: any) => {
 			        if (data.success == true) { 
-			           localStorage.setItem('access_token', data.token);
-			           this.token = localStorage.getItem('access_token');
-			           Materialize.toast("success 1", 1500, 'green white-text')
-			           $('.paymentButton').show()
+			           Materialize.toast(data.message, 1500, 'green white-text')
+			           $('#otp_code').modal('open');
 			        } else {
-			        	//user alreeady exists
-			         	Materialize.toast("Welcome back, kindly login to complete your booking", 1500, 'grey darken-2 white-text')
+			         	Materialize.toast(data.message, 1500, 'red white-text')
+			         	this.disableCheckoutButton = false;
 			        }
 		       },
 		       err => Materialize.toast("4", 1500, 'red white-text'),
-		       () => console.log()
+		       () => this.disableCheckoutButton = false
 		    );
 		} else {
-			Materialize.toast("success 2", 1500, 'green white-text')
+			//Materialize.toast("success 2", 1500, 'green white-text')
+			$('.checkoutButton').hide()
 			$('.paymentButton').show()
 		}
-
 	}
+
+	verifyOTPCode(){
+		$('#otp_code').modal('close');
+		let query = {
+			otp: this.otp,
+			phone: this.phone.replace('0', '234')
+		}
+		this.getStartedService.verifyOTP(query).subscribe(
+	    	(data: any) => {
+		        if (data.success == true) {
+		        	Materialize.toast(data.message, 1500, 'green white-text')
+		            this.getStartedService.registerGuest(this.guest).subscribe(
+				       (data: any) => {
+					        if (data.success == true) { 
+					           localStorage.setItem('access_token', data.token);
+					           this.token = localStorage.getItem('access_token');
+					           //Materialize.toast("success 1", 1500, 'green white-text')
+					           $('.checkoutButton').hide()
+							   $('.paymentButton').show()
+					        } else {
+					        	//user alreeady exists
+					         	Materialize.toast("Welcome back, kindly login to complete your booking", 3000, 'grey darken-2 white-text')
+					         	this.router.navigate(['/customer/login']);
+					        }
+				       },
+				       err => Materialize.toast("4", 1500, 'red white-text'),
+				       () => console.log()
+				    );
+		        } else {
+		         	Materialize.toast(data.message, 1500, 'red white-text')
+		         	this.disableCheckoutButton = false;
+		        }
+	    	},
+	    	err => Materialize.toast("4", 1500, 'red white-text'),
+	    	() => this.disableCheckoutButton = false
+	    );
+	}
+
 
 	makeBooking(gig){
 		gig.is_paid_for = true;

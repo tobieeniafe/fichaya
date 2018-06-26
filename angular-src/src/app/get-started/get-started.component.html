@@ -158,7 +158,14 @@
             <div class="input-field col m12 s12 center">
             	<button class="btn-large show1" type="button">Back <i class="ion-ios-arrow-thin-left"></i></button>
             	&nbsp;
-                <button class="btn-large" type="submit">Checkout <i class="ion-ios-cart"></i></button>
+                <button class="btn-large checkoutButton" type="submit" [disabled]="disableCheckoutButton">Checkout <i class="ion-ios-cart"></i></button>
+                &nbsp;
+                <button class="btn-large paymentButton" 
+					angular-rave
+					[raveOptions]="paymentOptions"
+					(close)="paymentCancel()"
+					(callback)="paymentDone($event)"
+				>Book Cleaner <i class="ion-card"></i></button>
             </div>
 		</div>
 
@@ -173,20 +180,13 @@
 <!-- =====
 	FORM END
 	====== -->
-			<div class="input-field col m12 s12 center paymentButton">
-                <button class="btn-large" 
-					angular-rave
-					[raveOptions]="paymentOptions"
-					(close)="paymentCancel()"
-					(callback)="paymentDone($event)"
-				>Book Cleaner <i class="ion-card"></i></button>
-            </div>
-            {{cleaner.phone}}
+            
+            <!-- {{cleaner.phone}} -->
 
 <!-- Modal Trigger -->
-<button data-target="customer_details" class="btn modal-trigger">Modal</button>
+<!-- <button data-target="customer_details" class="btn modal-trigger">Modal</button> -->
 
-  <!-- Modal Structure -->
+  <!-- Cleaner Details Modal Structure -->
 <div id="customer_details" class="modal cleaner-details">
 	<div class="modal-content">
 		<h4 class="center">Cleaner's Details</h4>
@@ -206,6 +206,22 @@
 	</div>
 </div>
 
+
+  <!-- OTP Modal Structure -->
+<div id="otp_code" class="modal otp_code" style="width: 350px; padding: 3rem">
+	<div class="modal-content center row">
+		<h6 class="">Kindly Verify Your Phone Number</h6>
+		<div class="input-field col m12 s12">
+            <input type="text" placeholder="OTP" name="otp" [(ngModel)]="otp">
+		</div>
+		<div class="input-field col m12 s12">
+			<a class="btn modal-action modal-close" (click)="verifyOTPCode()">Verify</a>
+		</div>
+	</div>
 </div>
+
+
+</div>
+
 
 

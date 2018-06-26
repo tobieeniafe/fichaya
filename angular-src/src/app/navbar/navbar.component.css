@@ -18,7 +18,7 @@
 }
 
 .open-nav {
-  min-height: 200px !important;
+  min-height: 300px !important;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .open-nav .mobile-toggle {
@@ -54,7 +54,7 @@
 
 nav {
   float: right;
-  width: 60%;
+  width: 80%;
 }
 
 @media only screen and (max-width: 766px) {

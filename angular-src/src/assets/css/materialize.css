@@ -3704,7 +3704,7 @@ small {
   .btn:hover, .btn-large:hover {
     background-color: #fff;
     color: #00003D;
-    border: 1px solid #00003D;
+    border: 1px solid rgba(0, 0, 61, 0.3); /*#00003D*/
     font-weight: bold; }
 
 .btn-floating {

@@ -44,6 +44,24 @@ export class GetStartedService {
 	    return this.http.post(this.api+'/customer/register', guest, httpOptions)
 	}
 
+	requestOTP(phone) {
+	    let httpOptions = {
+		  headers: new HttpHeaders({
+		    'Content-Type':  'application/json'
+		  })
+		};
+	    return this.http.post(this.api+'/customer/verify_phone', phone, httpOptions)
+	}
+
+	verifyOTP(code_n_phone) {
+	    let httpOptions = {
+		  headers: new HttpHeaders({
+		    'Content-Type':  'application/json'
+		  })
+		};
+	    return this.http.post(this.api+'/customer/verify_code', code_n_phone, httpOptions)
+	}
+
 	validateBookingDetails(booking, phone){
 	    if(booking.address == undefined || booking.busstop == undefined || booking.location == undefined || booking.time == undefined || booking.date == undefined || booking.email == undefined || phone == undefined){
 	      return false
